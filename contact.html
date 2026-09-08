@@ -1,0 +1,108 @@
+<!doctype html>
+<!-- Developed with the assistance of Claude Code (claude.ai) -->
+<!-- Body copy on this page uses real, hand-written <a>/<strong> tags, not
+     Markdown syntax -- every link and emphasis exists in the raw HTML for
+     crawlers and visitors that don't execute JavaScript. -->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta name="theme-color" content="#fcfcfb" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#17181a" media="(prefers-color-scheme: dark)">
+
+<!-- ====================================================================
+     SITE METADATA — page title, search/social descriptions.
+     This page now shares a domain with index.html (hibbittsdesign.org)
+     — update the canonical/og:url below too if that ever changes.
+     ==================================================================== -->
+<title>Contact | HibbittsDesign.org</title>
+<meta name="description" content="Get in touch with Paul Hibbitts — email direct or send a message with the form below.">
+<link rel="canonical" href="https://hibbittsdesign.org/contact.html">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://hibbittsdesign.org/contact.html">
+<meta property="og:title" content="Contact | HibbittsDesign.org">
+<meta property="og:description" content="Get in touch with Paul Hibbitts — email direct or send a message with the form below.">
+<meta property="og:image" content="https://hibbittsdesign.org/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@hibbittsdesign">
+<meta name="twitter:title" content="Contact | HibbittsDesign.org">
+<meta name="twitter:description" content="Get in touch with Paul Hibbitts — email direct or send a message with the form below.">
+<meta name="twitter:image" content="https://hibbittsdesign.org/assets/og-image.png">
+
+<!-- Public Sans and JetBrains Mono are self-hosted (assets/fonts/), not
+     loaded from Google Fonts, so the page has no external dependency and
+     works fully offline once deployed. See the @font-face rules at the
+     top of styles.css to swap in different fonts or weights. -->
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<div class="wrap">
+
+  <!-- ============ 1. HEADER / NAV ============ -->
+  <header class="site-head">
+    <span class="brand-line"><a class="brand" href="https://hibbittsdesign.org/"><img class="brand-mark" src="assets/hd-logo.png" width="83" height="178" alt=""><span><strong>HibbittsDesign<wbr>.org</strong></span></a></span>
+    <nav>
+      <a href="about.html">About Paul</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- ============ 2. CONTACT — heading, intro line, Tally form ============ -->
+  <section class="hero">
+    <h1>Contact</h1>
+    <p class="lede">Want to get in touch? Email me direct at paul@hibbittsdesign.org, or complete the form below.</p>
+
+    <!-- Tally form embed (form ID matches the one already in use on the
+         Notion-hosted Contact page). data-tally-src, not src, so the real
+         request only fires once the loader script below runs — keeps this
+         page's initial load free of any third-party network call. -->
+    <div class="tally-embed">
+      <iframe
+        data-tally-src="https://tally.so/embed/wodJd5?alignLeft=1&hideTitle=1&dynamicHeight=1"
+        loading="lazy"
+        width="100%"
+        height="500"
+        title="Contact form">
+      </iframe>
+    </div>
+  </section>
+
+  <!-- ============ 3. FOOTER — byline + links ============ -->
+  <footer>
+    <p>Built by <a href="about.html" class="tlink">Paul Hibbitts</a>. All projects are open source and MIT licensed. If one is useful to you, a GitHub &#9733; helps someone else find it. Questions or need help? <a href="contact.html" class="tlink">Get in touch</a> &ndash; or see <a href="services.html" class="tlink">Services</a> for professional support options.</p>
+    <div class="flinks">
+      <a href="https://github.com/hibbitts-design" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://mastodon.social/@hibbittsdesign" target="_blank" rel="noopener">Mastodon</a>
+      <a href="https://bsky.app/profile/hibbittsdesign.org" target="_blank" rel="noopener">Bluesky</a>
+      <a href="https://ca.linkedin.com/in/paulhibbitts" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </footer>
+</div>
+
+<!-- Tally embed loader: swaps data-tally-src onto the iframe's real src
+     once the widget script is ready, so the form only loads after this
+     page's own markup and styles are in place. Functionally equivalent to
+     Tally's own published embed snippet. -->
+<script>
+(function () {
+  var s = document.createElement('script');
+  s.src = 'https://tally.so/widgets/embed.js';
+  s.onload = function () {
+    if (window.Tally) { window.Tally.loadEmbeds(); }
+  };
+  s.onerror = function () {
+    document.querySelectorAll('iframe[data-tally-src]').forEach(function (el) {
+      if (!el.src) { el.src = el.dataset.tallySrc; }
+    });
+  };
+  document.body.appendChild(s);
+})();
+</script>
+</body>
+</html>
