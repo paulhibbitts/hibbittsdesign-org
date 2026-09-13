@@ -1,0 +1,6 @@
+# Permanent redirects for renamed pages, so old bookmarks, inbound links,
+# and search engine results still land on the current URL instead of a
+# 404. Add one line here each time a page's URL changes; never delete an
+# old entry just because it's no longer "recent" -- links from elsewhere
+# on the web can persist indefinitely.
+Redirect 301 /fully-open-source-grav-projects.html /cost-free-grav-projects.html
