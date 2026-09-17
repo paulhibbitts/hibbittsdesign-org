@@ -44,6 +44,104 @@
 <meta name="twitter:description" content="Real feedback from educators, publishers, and open-source users of Docsify-This, the Docsify Starter Kits, and the Grav CMS skeletons.">
 <meta name="twitter:image" content="https://hibbittsdesign.org/assets/icons/og-image.png">
 
+<!-- Structured data for search engines. No reviewRating is included since
+     none of these testimonials came with a numeric score -- adding one just
+     to qualify for a star rich snippet would misrepresent what was actually
+     given, so this stays as plain Review markup without ratings. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Docsify-This",
+      "url": "https://docsify-this.net",
+      "applicationCategory": "WebApplication",
+      "operatingSystem": "Web",
+      "review": [
+        {
+          "@type": "Review",
+          "author": {"@type": "Person", "name": "E. Louërat"},
+          "reviewBody": "I had great fun working with Docsify-This, especially as the whole process is quite simple (considering that I'm already familiar with Markdown, and a bit with Codeberg). I especially enjoyed its straightforward interface, making it very easy to generate something neat in just a few clicks, while still allowing more advanced adjustments."
+        },
+        {
+          "@type": "Review",
+          "author": {"@type": "Person", "name": "J. Groom"},
+          "reviewBody": "I'm blown away just by the fact you put a (Markdown file) URL into Docsify-This and then you get a URL back for a web page… done! Take the URL and go. It is so seamless."
+        },
+        {
+          "@type": "Review",
+          "author": {"@type": "Person", "name": "J. Maxwell"},
+          "reviewBody": "I've been using Docsify-This for my graduate publishing production course, partly to explore new models in markdown publishing, but partly also to tame Canvas, which I find awkward and cumbersome. Keeping all my course notes as plain text files and deploying them through Github and Docsify-This is easy and makes my course development a breeze. Plus, I keep all my materials locally, and can re-use them without being reliant on Canvas."
+        },
+        {
+          "@type": "Review",
+          "author": {"@type": "Person", "name": "D. Malawey"},
+          "reviewBody": "Best tool I've found in years - this is one of those creations that is just done right, all the way to the core."
+        },
+        {
+          "@type": "Review",
+          "author": {"@type": "Person", "name": "A. Levine"},
+          "reviewBody": "Docsify-This has significantly improved my WordPress themes by being able to seamlessly embed into the interface the same documentation I use in the GitHub repository. This in turn has led me to write better docs! I've barely scratched the surface of what Docsify-This can do as a simple-to-use web publishing tool."
+        }
+      ]
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "Docsify Open Course Starter Kit",
+      "url": "https://hibbitts-design.github.io/demo-docsify-open-course-starter-kit/#/",
+      "applicationCategory": "WebApplication",
+      "operatingSystem": "Web",
+      "review": [
+        {
+          "@type": "Review",
+          "author": {"@type": "Person", "name": "G. Chow"},
+          "reviewBody": "The Docsify Open Course Starter Kit is a follow-up to Paul's Grav Open Course Hub projects. The Docsify Kit provides a dead-easy(!) entry point to build content from scratch or migrate from existing Markdown files. The strength of the Docsify approach is the possibility of using GitHub Pages to provide a highly reliable hosting option. While some basic technical knowledge is expected, you can very easily and quickly update your course content once you get things going."
+        }
+      ]
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "Docsify Open MultiCourse Starter Kit",
+      "url": "https://hibbitts-design.github.io/demo-docsify-open-multicourse-starter-kit/#/",
+      "applicationCategory": "WebApplication",
+      "operatingSystem": "Web",
+      "review": [
+        {
+          "@type": "Review",
+          "author": {"@type": "Person", "name": "A. Blacquiere"},
+          "reviewBody": "I've found Paul Hibbitts' Docsify Open MultiCourse Starter Kit was a fantastic way to get a course up and in the open quickly and I really appreciate how efficient it makes rolling content into a new shell for the new term. The aesthetics are great, and the open source foundation of the project is very appealing. I love that I can host my courses with GitHub Pages and that I can easily mirror content in my college's CMS, Brightspace. On top of that, Paul has been very responsive when it comes to support and change requests, which has helped me to dial in my course to just the way I want it."
+        }
+      ]
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "Grav Helios Course Hub",
+      "url": "https://demo.hibbittsdesign.org/grav-helios-course-hub/",
+      "applicationCategory": "WebApplication",
+      "operatingSystem": "Web",
+      "review": [
+        {
+          "@type": "Review",
+          "author": {"@type": "Person", "name": "M. Coster"},
+          "reviewBody": "The Grav Open Course Hub was easy to set up and get running and my students loved having a one-stop place to go to for their course content. I really love that it syncs with GitHub so easily and seamlessly. I was able to have an open, collaborative, easily updatable, fully version-controlled site up and running in little time, with fairly modest technical skills. On the student side, it is all beautiful and easy to use on any device!"
+        },
+        {
+          "@type": "Review",
+          "author": {"@type": "Person", "name": "C. Corritore"},
+          "reviewBody": "I wanted to use something to get around the restrictions of our LMS. Everything was so plain vanilla there, and didn't provide the flexibility I needed. Grav Open Course Hub was the perfect answer to my problem. Using the available documentation, I was able to get it up and running, integrating it into my Canvas course. I did run into a few issues - and Paul of HibbittsDesign.org was immediately available to help me get past them. I highly recommend trying it - I think you will like it and the support is fabulous!"
+        },
+        {
+          "@type": "Review",
+          "author": {"@type": "Person", "name": "Colin Madland"},
+          "reviewBody": "The Grav Open Course Hub will allow TWU to deploy multiple versions of courses, all based on the same core content, to learners in widely diverse communities across the world. Since the core content of each course is centralized and versioned in GitHub, then displayed in Grav, we can ensure that all learners are interacting with the same content. Furthermore, since the content can be embedded directly into our LMS, we can build interactions, activities, and assessments unique to each community of learners, whether they are in India, Kenya, China or Canada."
+        }
+      ]
+    }
+  ]
+}
+</script>
+
 <!-- Public Sans and JetBrains Mono are self-hosted (assets/fonts/), not
      loaded from Google Fonts, so the page has no external dependency and
      works fully offline once deployed. See the @font-face rules at the
