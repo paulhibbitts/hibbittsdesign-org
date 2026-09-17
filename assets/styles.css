@@ -152,7 +152,7 @@ a{color:inherit;}
 .hero{padding:76px 0 20px;}
 .eyebrow-row{margin:0 0 22px;}
 .hero h1{
-  font-size:clamp(1.9rem, 9vw, 4.6rem);
+  font-size:clamp(2.9rem, 6vw, 4.6rem);
   line-height:1.05;
   letter-spacing:-0.025em;
   max-width:16ch;
@@ -163,7 +163,15 @@ a{color:inherit;}
    other page's h1 -- at the standard 16ch width those wrap to 4 heavy
    lines, so this widens the line box (font-size unchanged keeps them still
    reading as the same weight of headline, just fewer, more even lines) */
-.hero h1.essay-title{max-width:30ch;}
+.hero h1.essay-title{
+  max-width:30ch;
+  /* the base clamp's floor only relaxes above ~773px, so on phones these
+     longer titles were pinned at 46px and any word too wide to fit (e.g.
+     a hyphenated compound) got broken mid-word by hyphens:auto instead of
+     wrapping at its own hyphen -- this floor scales down further so long
+     titles actually shrink on narrow screens */
+  font-size:clamp(1.9rem, 9vw, 4.6rem);
+}
 /* compact tier tag on each dedicated page, echoing the homepage ladder's
    dot-marker styling so a visitor who lands here directly (skipping the
    homepage) still sees which of the three capability tiers this is */
