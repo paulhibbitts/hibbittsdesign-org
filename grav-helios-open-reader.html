@@ -28,13 +28,13 @@
      Shares a domain with the other pages (hibbittsdesign.org).
      ==================================================================== -->
 <title>Markdown Open Textbook Reader &ndash; Grav Helios | HibbittsDesign.org</title>
-<meta name="description" content="A modern, web-first alternative to Pressbooks for open textbooks and OER &ndash; built on Grav CMS with Markdown files, no database.">
+<meta name="description" content="A modern, web-first alternative to Pressbooks for open textbooks and OER &ndash; your book lives as Markdown files on Grav CMS, not in a database.">
 <link rel="canonical" href="https://hibbittsdesign.org/grav-helios-open-reader.html">
 
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://hibbittsdesign.org/grav-helios-open-reader.html">
 <meta property="og:title" content="Markdown Open Textbook Reader &ndash; Grav Helios | HibbittsDesign.org">
-<meta property="og:description" content="A modern, web-first alternative to Pressbooks for open textbooks and OER &ndash; built on Grav CMS with Markdown files, no database.">
+<meta property="og:description" content="A modern, web-first alternative to Pressbooks for open textbooks and OER &ndash; your book lives as Markdown files on Grav CMS, not in a database.">
 <meta property="og:image" content="https://hibbittsdesign.org/assets/icons/og-grav-helios-open-reader.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -42,7 +42,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@hibbittsdesign">
 <meta name="twitter:title" content="Markdown Open Textbook Reader &ndash; Grav Helios | HibbittsDesign.org">
-<meta name="twitter:description" content="A modern, web-first alternative to Pressbooks for open textbooks and OER &ndash; built on Grav CMS with Markdown files, no database.">
+<meta name="twitter:description" content="A modern, web-first alternative to Pressbooks for open textbooks and OER &ndash; your book lives as Markdown files on Grav CMS, not in a database.">
 <meta name="twitter:image" content="https://hibbittsdesign.org/assets/icons/og-grav-helios-open-reader.png">
 
 <!-- Structured data for search engines -->
@@ -141,7 +141,7 @@
     <h1>Grav Helios Open Reader</h1>
     <p class="tier-track"><span class="tier-step am current"><span class="tier-dot"></span>Full CMS</span></p>
     <p class="lede">The Grav Helios Open Reader is a database-free, web-first reader for open textbooks, long-form web guides, and OER (open educational resources) publications &ndash; a ready-to-run Grav CMS skeleton package, built on a plugin architecture, that transforms the <a href="https://getgrav.org/premium/helios" class="tlink" target="_blank" rel="noopener">Grav Premium Helios theme</a> into a structured reader with Markdown file-based content and an integrated Admin panel.</p>
-    <p class="lede">It gives your open content a modern, clean, and organized home on the web: a place to openly publish course readers, textbooks, and learning resources that you keep and control. Host a single publication or a full collection, all from one install. Write your open textbook as plain Markdown files and publish it as a searchable, web-first reader.</p>
+    <p class="lede">It gives your open content a modern, clean, and organized home on the web: a place to openly publish course readers, textbooks, and learning resources that you keep and control. Host a single publication or a full collection, all from one install. Write your open textbook as plain Markdown files and publish it as a searchable, web-first reader. Your book is stored as ordinary Markdown files, one per page, not in a database &ndash; edit them in the Admin panel or work with the files directly through Git.</p>
     <p class="jump-links">Jump to: <a href="#sets-it-apart" class="tlink">What Sets It Apart</a> &middot; <a href="#pressbooks-alternative" class="tlink">A Markdown Alternative to Pressbooks</a> &middot; <a href="#see-it-in-action" class="tlink">See It in Action</a></p>
     <hr class="hero-rule">
   </section>
@@ -197,18 +197,21 @@
 
     <div class="proj-section" id="pressbooks-alternative">
       <h2>A Markdown Alternative to Pressbooks</h2>
-      <p>The Open Reader is a web-first way to publish an open textbook from plain Markdown files, built on Grav CMS and the paid Grav Premium Helios theme, with no database. It is not a full replacement for Pressbooks, which is built around producing PDF and EPUB editions alongside the web version.</p>
+      <p>The Open Reader is a web-first way to publish an open textbook from plain Markdown files, built on Grav CMS and the paid Grav Premium Helios theme, with no database. Pressbooks is also open source and can be self-hosted; the difference is how the book is authored and stored. The Open Reader keeps it as flat Markdown files you can version with Git, while Pressbooks runs on a WordPress database and produces PDF and EPUB editions alongside the web version. It is not a full replacement for Pressbooks.</p>
       <ul class="feat-list">
         <li><strong>Choose the Open Reader when</strong> &ndash; your readers mainly read on the web or inside an LMS, you want your book as portable Markdown files that you own and version with Git, and you are comfortable hosting a Grav site (PHP 8.3+)</li>
         <li><strong>Choose Pressbooks or Bookdown when</strong> &ndash; print-ready PDF or EPUB output is a core part of your publishing workflow</li>
-        <li><strong>Moving an existing book</strong> &ndash; the Pressbooks Converter (beta) above carries a Pressbooks export across as Markdown, so you can try the Open Reader without retyping anything</li>
+        <li><strong>Choose Pressbooks when</strong> &ndash; your institution offers a hosted, supported Pressbooks network, you want native LTI integration with your LMS, or your authors would rather not host a site or work with Markdown files</li>
+        <li><strong>Cost and hosting</strong> &ndash; the Open Reader needs the Grav Premium Helios theme license ($50) plus your own hosting, while many instructors can use a Pressbooks network their institution already pays for</li>
+        <li><strong>Support</strong> &ndash; the Open Reader is an independent open-source project maintained by Paul Hibbitts, with optional paid support on the <a href="services.html" class="tlink">Services page</a>; there is no institutional support team behind it</li>
+        <li><strong>Moving an existing book</strong> &ndash; the Pressbooks Converter (beta) above carries a Pressbooks export across as Markdown, so you can try the Open Reader without retyping anything. H5P activities come across as links, and embedding them depends on the original Pressbooks book staying publicly available.</li>
       </ul>
     </div>
 
     <div class="proj-section">
       <h2>Behind the Scenes</h2>
       <ul class="feat-list">
-        <li><strong>No database, no complexity</strong> &ndash; runs on simple text files, easier to back up, version control, and migrate than database-driven platforms</li>
+        <li><strong>Markdown files, not a database</strong> &ndash; your content runs on simple text files, easier to back up, version control, and migrate than database-driven platforms</li>
         <li><strong>Team-ready</strong> &ndash; multi-user editing with role-based access rights for team-managed reader content</li>
         <li><strong>Supports open-source sustainability</strong> &ndash; the Grav Premium Helios theme requires a license, and that revenue directly funds continued development of open-source Grav CMS</li>
       </ul>
