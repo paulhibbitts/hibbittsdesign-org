@@ -635,7 +635,7 @@ a.badge:focus-visible{filter:brightness(0.94);}
    button row to the bottom of that height instead of floating wherever the
    preceding content happens to end */
 .kit{display:flex; flex-direction:column;}
-.kit h4{
+.kit h3, .kit h4{
   font-family:var(--font-sans); font-size:1.1rem; font-weight:700;
   letter-spacing:-0.01em;
   margin:0 0 8px;
