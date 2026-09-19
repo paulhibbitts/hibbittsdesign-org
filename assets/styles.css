@@ -905,7 +905,7 @@ footer{
   gap:28px 32px;
 }
 .ffollow{display:flex; flex-direction:column; gap:9px;}
-footer p{font-size:var(--text-min); color:var(--ink-faint); margin:0;}
+footer p{font-size:var(--text-min); color:var(--ink-faint); margin:0; max-width:64ch;}
 footer .flinks{display:flex; flex-wrap:wrap; gap:14px 22px;}
 footer .flinks a{display:inline-flex; align-items:center; gap:4px; font-size:var(--text-min); color:var(--ink-soft); text-decoration:none;}
 footer .flinks a:hover,
@@ -934,9 +934,17 @@ footer .flinks a:focus-visible{color:var(--link);}
 .proj-section{margin:48px 0;}
 .proj-section h2{font-size:1.5rem; letter-spacing:-0.015em; margin:0 0 14px;}
 .proj-section p{font-size:var(--text-min); color:var(--ink-soft); line-height:1.65; max-width:70ch; margin:0 0 16px;}
+/* bullets get the same measure as the paragraphs above them (ch is measured at the li's own font size) */
+.proj-section .feat-list li{max-width:70ch;}
+
+/* project cards stack earlier than the rest of the mobile layout: side by side they leave a text column under ~480px wide between 761 and 900px */
+@media (max-width:900px){
+  .project{grid-template-columns:1fr; gap:20px; padding:28px;}
+}
 
 @media (max-width:760px){
   body{font-size:18px;}
+  .wrap{padding:0 20px;}
   .site-head{flex-wrap:wrap; gap:14px 0; row-gap:14px;}
   .site-head nav{gap:18px;}
   .brand{flex-wrap:wrap; row-gap:2px;}
@@ -947,15 +955,15 @@ footer .flinks a:focus-visible{color:var(--link);}
   .chrome-url{display:none;}
   .track{grid-template-columns:1fr; row-gap:32px;}
   .track::before{display:none;}
-  .project{grid-template-columns:1fr; gap:20px; padding:28px;}
+  .project{padding:20px;}
   .kit-grid{grid-template-columns:1fr; gap:26px;}
   .kit-example{flex-direction:column; align-items:flex-start; gap:10px;}
   .service-grid{grid-template-columns:1fr; gap:32px;}
   .grav-grid{grid-template-columns:1fr; gap:32px;}
   .thumb-grid{grid-template-columns:1fr; gap:20px;}
   .testi-grid{column-count:1;}
-  .more{padding:28px;}
-  .tools{padding:28px;}
+  .more{padding:20px;}
+  .tools{padding:20px;}
   .tool{flex-direction:column; align-items:flex-start; gap:10px;}
   .prow{grid-template-columns:1fr; justify-items:start; gap:10px; padding:20px 24px;}
   .fmap{grid-template-columns:1fr 1fr; gap:24px 20px;}
