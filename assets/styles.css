@@ -336,6 +336,7 @@ a{color:inherit;}
 }
 .testi-group.tk h2.sub{color:var(--teal);}
 .testi-group.green h2.sub{color:var(--green);}
+.testi-group.am h2.sub{color:var(--amber);}
 .testi-grid{
   column-count:2;
   column-gap:40px;
@@ -350,6 +351,7 @@ a{color:inherit;}
 }
 .testi-group.tk .testi{border-left-color:var(--teal);}
 .testi-group.green .testi{border-left-color:var(--green);}
+.testi-group.am .testi{border-left-color:var(--amber);}
 .testi::before{
   content:"\201C";
   position:absolute;
@@ -364,6 +366,7 @@ a{color:inherit;}
 }
 .testi-group.tk .testi::before{color:var(--teal);}
 .testi-group.green .testi::before{color:var(--green);}
+.testi-group.am .testi::before{color:var(--amber);}
 .testi p{
   font-size:var(--text-min);
   color:var(--ink-soft);
