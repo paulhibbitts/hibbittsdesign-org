@@ -234,6 +234,18 @@ a{color:inherit;}
   flex-direction:column;
   gap:10px;
 }
+/* callout box -- sets an aside for a different audience (e.g. instructors,
+   on a page otherwise written for students) visually apart from the main
+   flow. Reuses the tk (Docsify-This) accent tokens rather than a new color. */
+.prose .callout{
+  margin:32px 0 0;
+  padding:20px 24px;
+  background:var(--teal-soft);
+  border-left:3px solid var(--teal);
+  border-radius:var(--radius-md);
+}
+.prose .callout h2.sub{margin-top:0;}
+.prose .callout p:last-child{margin-bottom:0;}
 .prose ul strong{
   color:var(--ink);
   font-weight:600;
