@@ -25,24 +25,23 @@
 
 <!-- ====================================================================
      SITE METADATA — page title, search/social descriptions.
-     This page now shares a domain with index.html (hibbittsdesign.org)
-     — update the canonical/og:url below too if that ever changes.
+     Shares a domain with the other pages (hibbittsdesign.org).
      ==================================================================== -->
-<title>Contact | HibbittsDesign.org</title>
-<meta name="description" content="Get in touch with Paul Hibbitts about Docsify-This, the Docsify Starter Kits, Grav Helios, or Markdown for open education and publishing.">
-<link rel="canonical" href="https://hibbittsdesign.org/contact.html">
+<title>Creating GitHub Course Notes for Docsify-This | HibbittsDesign.org</title>
+<meta name="description" content="A few simple structural choices make your course notes work great on GitHub and with Docsify-This alike &ndash; no extra tools required.">
+<link rel="canonical" href="https://hibbittsdesign.org/creating-github-course-notes.html">
 
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://hibbittsdesign.org/contact.html">
-<meta property="og:title" content="Contact | HibbittsDesign.org">
-<meta property="og:description" content="Get in touch with Paul Hibbitts about Docsify-This, the Docsify Starter Kits, Grav Helios, or Markdown for open education and publishing.">
+<meta property="og:url" content="https://hibbittsdesign.org/creating-github-course-notes.html">
+<meta property="og:title" content="Creating GitHub Course Notes for Docsify-This | HibbittsDesign.org">
+<meta property="og:description" content="A few simple structural choices make your course notes work great on GitHub and with Docsify-This alike &ndash; no extra tools required.">
 <meta property="og:image" content="https://hibbittsdesign.org/assets/icons/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@hibbittsdesign">
-<meta name="twitter:title" content="Contact | HibbittsDesign.org">
-<meta name="twitter:description" content="Get in touch with Paul Hibbitts about Docsify-This, the Docsify Starter Kits, Grav Helios, or Markdown for open education and publishing.">
+<meta name="twitter:title" content="Creating GitHub Course Notes for Docsify-This | HibbittsDesign.org">
+<meta name="twitter:description" content="A few simple structural choices make your course notes work great on GitHub and with Docsify-This alike &ndash; no extra tools required.">
 <meta name="twitter:image" content="https://hibbittsdesign.org/assets/icons/og-image.png">
 
 <!-- Public Sans and JetBrains Mono are self-hosted (assets/fonts/), not
@@ -117,24 +116,31 @@
         });
       });
     </script>
-  </header><!-- ============ 2. CONTACT — heading, intro line, Tally form ============ -->
+  </header><!-- ============ 2. CREATING GITHUB COURSE NOTES — instructor-facing how-to for Docsify-This ============ -->
   <section class="hero">
-    <h1>Contact</h1>
-    <p class="lede">Questions about Docsify-This, the Docsify Starter Kits, or Grav Helios? Exploring Markdown for open education, open publishing, or OER? Feedback, ideas, or a quick hello are all welcome. Email me direct at paul@hibbittsdesign.org, or complete the form below.</p>
-    <p class="lede">The #Docsify-This channel on the <a href="https://discord.gg/docsify" class="tlink" target="_blank" rel="noopener">Docsify Discord</a> is also a good place for usage questions. For team or organization support, see <a href="services.html" class="tlink">Services</a>.</p>
+    <h1 class="essay-title">Creating GitHub Course Notes for Docsify&#8209;This</h1>
+    <p class="lede">A few simple structural choices &ndash; whether you're starting fresh or adjusting notes you already have &ndash; create a repository students can navigate easily, on GitHub or with Docsify-This alike, with no extra tools required.</p>
+    <hr class="hero-rule">
+  </section>
 
-    <!-- Tally form embed (form ID matches the one already in use on the
-         Notion-hosted Contact page). data-tally-src, not src, so the real
-         request only fires once the loader script below runs — keeps this
-         page's initial load free of any third-party network call. -->
-    <div class="tally-embed">
-      <iframe
-        data-tally-src="https://tally.so/embed/wodJd5?alignLeft=1&hideTitle=1&dynamicHeight=1"
-        loading="lazy"
-        height="500"
-        title="Contact form">
-      </iframe>
-    </div>
+  <section class="prose">
+    <h2 class="sub">Keep it flat when you can</h2>
+    <p>A flat repository &ndash; one Markdown file per topic, with no subfolders &ndash; needs no special configuration at all. Paste any file's URL into Docsify-This and it just works. Folders are fine too, once a course grows past a single page per week &ndash; just turn on <strong>Links Within a Site</strong>, as described in <a href="viewing-github-course-notes.html#links-not-working" class="tlink">the student guide's "If page links are not working" section</a>, so links between files keep working.</p>
+
+    <h2 class="sub">Avoid numbered headings</h2>
+    <p>Keep headings from starting with a digit &ndash; write "Week 1" or "Unit One", not "1. Week 1". Numbered headings are common in course notes, but Docsify can't reliably jump to them: a heading whose id starts with a number breaks link-based navigation to that heading, and there's no setting that fixes it.</p>
+
+    <h2 class="sub">Skip table-of-contents generator tools</h2>
+    <p>Tools like DocToc are built for reading directly on GitHub, and generate links that match GitHub's own heading-id rules &ndash; which don't always match the ids Docsify-This generates for those same headings. Docsify-This already builds a real, working table of contents for every page automatically, with no extra tool required.</p>
+
+    <h2 class="sub">Let your README do double duty</h2>
+    <p>A short README with a simple schedule or index table works as both your repository's front page on GitHub and the homepage Docsify-This publishes &ndash; one file, two audiences. See <a href="https://github.com/paulhibbitts/markdown-101-course-notes" class="tlink" target="_blank" rel="noopener">a working example</a> that follows every guideline on this page.</p>
+
+    <h2 class="sub">Level up with custom sidebar</h2>
+    <p>Once a course grows past a single-page outline, add a <code>_sidebar.md</code> file listing your pages for real site-wide navigation, and a <code>_navbar.md</code> for a top navigation bar. Search then covers every page the sidebar lists, not just the one a student happens to be on. See a <a href="https://docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-multiple-page-course-site/main&amp;homepage=home.md&amp;sidebar=true&amp;loadSidebar=_sidebar.md&amp;name=CPT-363&amp;loadNavbar=_navbar.md&amp;mergeNavbar=true&amp;loadFavicon=favicon.png&amp;hide-credits=true&amp;browser-tab-title=CPT-363&amp;searchbox=true#/" class="tlink" target="_blank" rel="noopener">live example</a> of all three in action.</p>
+
+    <h2 class="sub">Questions?</h2>
+    <p>See <a href="docsify-this.html" class="tlink">Docsify&#8209;This</a> for the main project page, <a href="viewing-github-course-notes.html" class="tlink">the student guide</a> for the reading side of this, or <a href="contact.html" class="tlink">get in touch</a>.</p>
   </section>
 
   <!-- ============ 3. FOOTER — byline + links ============ -->
@@ -183,24 +189,5 @@
   </footer>
 </div>
 
-<!-- Tally embed loader: swaps data-tally-src onto the iframe's real src
-     once the widget script is ready, so the form only loads after this
-     page's own markup and styles are in place. Functionally equivalent to
-     Tally's own published embed snippet. -->
-<script>
-(function () {
-  var s = document.createElement('script');
-  s.src = 'https://tally.so/widgets/embed.js';
-  s.onload = function () {
-    if (window.Tally) { window.Tally.loadEmbeds(); }
-  };
-  s.onerror = function () {
-    document.querySelectorAll('iframe[data-tally-src]').forEach(function (el) {
-      if (!el.src) { el.src = el.dataset.tallySrc; }
-    });
-  };
-  document.body.appendChild(s);
-})();
-</script>
 </body>
 </html>

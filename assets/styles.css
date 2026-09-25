@@ -909,6 +909,13 @@ footer{
   text-transform:uppercase; letter-spacing:0.04em;
   color:var(--ink-faint); margin:0 0 3px;
 }
+/* sub-grouping within a single .fmap-col (e.g. Resources -> Guides/Articles):
+   deliberately NOT styled like .fmap-label (mono/uppercase) so it doesn't
+   compete with the column headers -- just a quiet weight/color break. */
+.fmap-sublabel{
+  font-size:var(--text-min); font-weight:600;
+  color:var(--ink-faint); margin:6px 0 0;
+}
 .fmap-col a{font-size:var(--text-min); color:var(--ink-soft); text-decoration:none;}
 .fmap-col a:hover,
 .fmap-col a:focus-visible{color:var(--link);}
