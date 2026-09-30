@@ -1,8 +1,8 @@
 <!doctype html>
 <!-- Developed with the assistance of Claude Code (claude.ai) -->
-<!-- Body copy on this page uses real, hand-written <a>/<strong> tags, not
-     Markdown syntax -- every link and emphasis exists in the raw HTML for
-     crawlers and visitors that don't execute JavaScript. -->
+<!-- Body copy on this page uses real, hand-written <a> tags so every link
+     exists in the raw HTML for crawlers and visitors that don't execute
+     JavaScript. -->
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -25,24 +25,23 @@
 
 <!-- ====================================================================
      SITE METADATA — page title, search/social descriptions.
-     This page now shares a domain with index.html (hibbittsdesign.org)
-     — update the canonical/og:url below too if that ever changes.
+     Shares a domain with the other pages (hibbittsdesign.org).
      ==================================================================== -->
-<title>Contact | HibbittsDesign.org</title>
-<meta name="description" content="Get in touch with Paul Hibbitts about Docsify-This, the Docsify Starter Kits, Grav Helios, or Markdown for open education and publishing.">
-<link rel="canonical" href="https://hibbittsdesign.org/contact.html">
+<title>A Quick Acid Test for Your Product Design Knowledge? | HibbittsDesign.org</title>
+<meta name="description" content="A framework for testing product design clarity: can you write your value proposition as questions your actual audience would recognize themselves in?">
+<link rel="canonical" href="https://hibbittsdesign.org/quick-acid-test-product-design-knowledge.html">
 
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://hibbittsdesign.org/contact.html">
-<meta property="og:title" content="Contact | HibbittsDesign.org">
-<meta property="og:description" content="Get in touch with Paul Hibbitts about Docsify-This, the Docsify Starter Kits, Grav Helios, or Markdown for open education and publishing.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hibbittsdesign.org/quick-acid-test-product-design-knowledge.html">
+<meta property="og:title" content="A Quick Acid Test for Your Product Design Knowledge? | HibbittsDesign.org">
+<meta property="og:description" content="A framework for testing product design clarity: can you write your value proposition as questions your actual audience would recognize themselves in?">
 <meta property="og:image" content="https://hibbittsdesign.org/assets/icons/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@hibbittsdesign">
-<meta name="twitter:title" content="Contact | HibbittsDesign.org">
-<meta name="twitter:description" content="Get in touch with Paul Hibbitts about Docsify-This, the Docsify Starter Kits, Grav Helios, or Markdown for open education and publishing.">
+<meta name="twitter:title" content="A Quick Acid Test for Your Product Design Knowledge? | HibbittsDesign.org">
+<meta name="twitter:description" content="A framework for testing product design clarity: can you write your value proposition as questions your actual audience would recognize themselves in?">
 <meta name="twitter:image" content="https://hibbittsdesign.org/assets/icons/og-image.png">
 
 <!-- Public Sans and JetBrains Mono are self-hosted (assets/fonts/), not
@@ -117,24 +116,37 @@
         });
       });
     </script>
-  </header><!-- ============ 2. CONTACT — heading, intro line, Tally form ============ -->
+  </header><!-- ============ 2. ARTICLE — user problem scenarios as a product-clarity framework ============ -->
   <section class="hero">
-    <h1>Contact</h1>
-    <p class="lede">Questions about Docsify-This, the Docsify Starter Kits, or Grav Helios? Exploring Markdown for open education, open publishing, or OER? Feedback, ideas, or a quick hello are all welcome. Email me direct at paul@hibbittsdesign.org, or complete the form below.</p>
-    <p class="lede">The #Docsify-This channel on the <a href="https://discord.gg/docsify" class="tlink" target="_blank" rel="noopener">Docsify Discord</a> is also a good place for usage questions. For team or organization support, see <a href="services.html" class="tlink">Services</a>.</p>
+    <h1 class="essay-title">A Quick Acid Test for Your Product Design Knowledge?</h1>
+    <hr class="hero-rule">
+  </section>
 
-    <!-- Tally form embed (form ID matches the one already in use on the
-         Notion-hosted Contact page). data-tally-src, not src, so the real
-         request only fires once the loader script below runs — keeps this
-         page's initial load free of any third-party network call. -->
-    <div class="tally-embed">
-      <iframe
-        data-tally-src="https://tally.so/embed/wodJd5?alignLeft=1&hideTitle=1&dynamicHeight=1"
-        loading="lazy"
-        height="500"
-        title="Contact form">
-      </iframe>
-    </div>
+  <section class="prose">
+    <p>A user problem scenario is a question aimed directly at your audience &ndash; &ldquo;Want to achieve X while addressing Y?&rdquo; &ndash; rather than a statement aimed at your team, like the user needs statements described by the <a href="https://www.nngroup.com/articles/user-need-statements/" class="tlink" target="_blank" rel="noopener">Nielsen Norman Group</a> (&ldquo;A user needs X to achieve Y&rdquo;). Same underlying need, different job: needs statements guide internal design decisions, while problem scenarios spark reflection in someone reading your landing page or README. Start with specific, advanced challenges before moving to general, introductory ones &ndash; specificity is what lets a reader recognize themselves.</p>
+
+    <h2 class="sub">Try it on your own product</h2>
+    <p>Here's what that looked like for <a href="https://docsify-this.net/#/" class="tlink" target="_blank" rel="noopener">Docsify-This</a>:</p>
+    <ul class="principles">
+      <li>Curious about using Markdown files as shareable web pages for open education, publishing, or collaboration &ndash; with no website setup?</li>
+      <li>Want to quickly leverage Markdown content for education, publishing, or collaboration?</li>
+      <li>Are you using a Learning Management System (LMS) and want to leverage constraint-free portable Markdown text for your course content?</li>
+      <li>Want to embed the same content across multiple platforms while customizing its visual style for each context?</li>
+      <li>Do you want to maintain access and control of your course content while having the ability to embed it into your institutional LMS?</li>
+      <li>Want to create open course materials that are accessible both inside and outside your LMS?</li>
+      <li>Do you have multiple LMS courses and want one source for content, under your full control?</li>
+    </ul>
+    <p>The same technique works for any product, not just Markdown publishing tools. A few written for Figma, a collaborative prototyping tool:</p>
+    <ul class="principles">
+      <li>Want to collaborate with design team members across different locations in real time, with a shared workspace?</li>
+      <li>Want to share design prototypes and mockups instantly without complicated file transfers or version-control issues?</li>
+      <li>Do you need to streamline design handoff between designers and developers, ensuring accurate implementation?</li>
+    </ul>
+
+    <h2 class="sub">What makes a good one</h2>
+    <p>A good user problem scenario prioritizes real challenges over features or unfamiliar jargon, encourages reflection rather than just informing, and balances relatability with a professional tone for both technical and non-technical readers. It sparks interest by presenting a relatable challenge, links that challenge to what the product actually offers, and helps people notice a need they hadn't fully articulated yet.</p>
+
+    <p>Originally built for marketing and onboarding, these scenarios double as a quick test of whether a product team shares a real, unified understanding of how and why people actually use what they've built &ndash; which is the acid test. Try writing five for whatever you're building; if you can't, that's worth knowing too.</p>
   </section>
 
   <!-- ============ 3. FOOTER — byline + links ============ -->
@@ -185,24 +197,5 @@
   </footer>
 </div>
 
-<!-- Tally embed loader: swaps data-tally-src onto the iframe's real src
-     once the widget script is ready, so the form only loads after this
-     page's own markup and styles are in place. Functionally equivalent to
-     Tally's own published embed snippet. -->
-<script>
-(function () {
-  var s = document.createElement('script');
-  s.src = 'https://tally.so/widgets/embed.js';
-  s.onload = function () {
-    if (window.Tally) { window.Tally.loadEmbeds(); }
-  };
-  s.onerror = function () {
-    document.querySelectorAll('iframe[data-tally-src]').forEach(function (el) {
-      if (!el.src) { el.src = el.dataset.tallySrc; }
-    });
-  };
-  document.body.appendChild(s);
-})();
-</script>
 </body>
 </html>

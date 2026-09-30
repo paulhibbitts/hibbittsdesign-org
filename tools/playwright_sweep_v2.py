@@ -11,7 +11,8 @@ PAGES = ["index.html", "contact.html", "services.html", "cost-free-grav-projects
          "dual-purpose-documentation-framework.html", "systems-oriented-design.html",
          "docsify-this.html", "docsify-this-tutorials-workshops.html", "docsify-starter-kits.html", "grav-helios-course-hub.html",
          "grav-helios-open-reader.html", "design-origins.html", "viewing-github-course-notes.html", "creating-github-course-notes.html",
-         "thinking-like-a-consultant.html"]
+         "thinking-like-a-consultant.html", "architecture-beneath-the-user-experience.html",
+         "quick-acid-test-product-design-knowledge.html"]
 # NOTE: keep this list in sync with the identical PAGES list in
 # verify_all_v2.py, error_check.py, and sync_boilerplate.py --
 # add a new page to all four when one is created.
