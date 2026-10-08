@@ -332,7 +332,7 @@ a{color:inherit;}
   min-width:200px;
 }
 /* testimonials page — quotes grouped by project. Unboxed like the site's
-   other grids (.service-grid, .grav-grid): a left rule marks each quote
+   other grids (such as .service-grid): a left rule marks each quote
    instead of a bordered card. Each group carries the same project-family
    accent already used on the homepage ladder/badges (.tk green for the
    Docsify family, .green for the free Grav skeletons, which share the Grav
@@ -785,7 +785,7 @@ a.badge:focus-visible{filter:brightness(0.94);}
 
 /* link to the testimonials page (or a specific anchor within it). Used on
    the homepage, right after the four project cards, and on the Grav
-   projects page, right after the grav-grid. Same treatment as .more-foot
+   projects page, right after the four project cards. Same treatment as .more-foot
    below, just scoped to .projects instead of .more. */
 .projects-foot{margin:40px 0 0; font-size:var(--text-min);}
 .projects-foot a{color:var(--link); font-weight:600; text-decoration:none;}
@@ -859,28 +859,20 @@ a.badge:focus-visible{filter:brightness(0.94);}
 .grav-picker-list li{font-size:var(--text-min); color:var(--ink-soft); line-height:1.6; padding-left:18px; position:relative;}
 .grav-picker-list li::before{content:"\2013"; position:absolute; left:0; top:0; color:var(--ink-faint);}
 .grav-picker-list strong{color:var(--ink); font-weight:600;}
-.grav-grid{
-  display:grid; grid-template-columns:1fr 1fr; gap:40px 56px;
-}
-/* screenshot banner atop a grav-card, full card width */
+/* screenshot in a bordered frame, full width (used in .thumb-grid on the project pages) */
 .grav-thumb{margin:0 0 16px; border:1px solid var(--line); overflow:hidden; line-height:0;}
 .grav-thumb img{display:block; width:100%; height:auto;}
 .grav-thumb a:hover img,
 .grav-thumb a:focus-visible img{filter:brightness(0.94);}
 /* two screenshots side by side on a dedicated project page (docsify-this.html
-   and friends) -- narrower gap than .grav-grid since these are two views of
+   and friends) -- a narrow gap, since these are two views of
    the same product, not separate cards. .grav-thumb's own bottom margin is
    redundant once the grid gap is doing that spacing. */
 .thumb-grid{display:grid; grid-template-columns:1fr 1fr; gap:16px; margin:28px 0;}
 .thumb-grid figure{margin:0;}
 .thumb-grid .grav-thumb{margin:0;}
 .thumb-cap{font-size:0.92rem; color:var(--ink-faint); text-align:center; margin:10px 0 0;}
-.grav-card h3{font-size:1.28rem; font-weight:700; letter-spacing:-0.01em; margin:0 0 8px;}
-.grav-card .badge-row{margin:0 0 10px;}
-.grav-card p{font-size:var(--text-min); color:var(--ink-soft); line-height:1.6; margin:0 0 16px;}
-.grav-card .links{gap:10px;}
 .grav-projects>p{font-size:var(--text-min); color:var(--ink-soft); line-height:1.6; margin:22px 0 0; max-width:70ch;}
-.grav-grid + p{margin-top:56px;}
 /* plugin callout — separated from the four skeleton cards above by
    whitespace and its own heading, unboxed like the grid cards themselves
    rather than bordered. */
@@ -984,7 +976,6 @@ footer .flinks a:focus-visible{color:var(--link);}
   .kit-grid{grid-template-columns:1fr; gap:26px;}
   .kit-example{flex-direction:column; align-items:flex-start; gap:10px;}
   .service-grid{grid-template-columns:1fr; gap:32px;}
-  .grav-grid{grid-template-columns:1fr; gap:32px;}
   .thumb-grid{grid-template-columns:1fr; gap:20px;}
   .testi-grid{column-count:1;}
   .more{padding:20px;}
