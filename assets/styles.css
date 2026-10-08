@@ -587,6 +587,9 @@ a{color:inherit;}
 }
 .project.tk .project-tag{color:var(--teal);}
 .project.am .project-tag{color:var(--amber);}
+.project.green .project-tag{color:var(--green);}
+/* the full project cards on the cost-free Grav projects page sit right under its picker line, not 110px down */
+.grav-projects .projects{margin:24px 0;}
 .project-head{display:flex; flex-direction:column; align-items:flex-start; gap:14px;}
 /* small screenshot preview under a project's badges — currently used on the two Grav Helios cards only */
 .project-thumb{width:100%; align-self:stretch; overflow:hidden; border:1px solid var(--line); line-height:0;}
