@@ -881,6 +881,17 @@ a.badge:focus-visible{filter:brightness(0.94);}
 .grav-plugin p{font-size:var(--text-min); color:var(--ink-soft); line-height:1.6; margin:0 0 16px; max-width:70ch;}
 .grav-plugin .links{gap:10px;}
 .grav-plugin .links + p{margin-top:20px;}
+/* free vs Grav Helios comparison tables on the cost-free Grav projects page. On narrow screens a table scrolls
+   sideways inside its own box (.compare-wrap) rather than making the whole page scroll. */
+.compare-wrap{overflow-x:auto; margin:0 0 24px; border:1px solid var(--line); border-radius:var(--radius-lg); background:var(--surface);}
+.compare-table{width:100%; min-width:560px; border-collapse:collapse; font-size:0.98rem; line-height:1.5;}
+.compare-table caption{caption-side:top; text-align:left; font-family:var(--font-mono); font-size:var(--text-min); font-weight:700; letter-spacing:0.04em; text-transform:uppercase; color:var(--ink-soft); padding:14px 16px 0;}
+.compare-table th,
+.compare-table td{text-align:left; vertical-align:top; padding:10px 16px; border-top:1px solid var(--line);}
+.compare-table thead th{border-top:0; font-weight:700; color:var(--ink);}
+.compare-table tbody th{font-weight:600; color:var(--ink); white-space:nowrap; width:1%;}
+.compare-table td{color:var(--ink-soft);}
+.compare-tag{display:inline-block; margin-left:6px; padding:1px 8px; border-radius:var(--radius-pill); background:var(--green-soft); color:var(--green); font-size:0.8rem; font-weight:600; vertical-align:middle;}
 
 /* footer */
 footer{

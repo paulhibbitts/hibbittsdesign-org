@@ -200,7 +200,7 @@
     <p class="tier-track"><span class="tier-step green current"><span class="tier-dot"></span>Full CMS</span></p>
     <p class="lede">The Cost-Free Grav Projects are four fully open-source skeletons, built on the newly released Grav 2 (with Grav 1.7 versions also available), for open guides and books, course hubs, multi-course sites, and documentation &ndash; well suited to OER and other open educational resources. <a href="https://getgrav.org" class="tlink" target="_blank" rel="noopener">Grav</a> (15.7k &#9733;s) is a flat-file CMS that stores content as plain Markdown files instead of a database, edited through a browser-based Admin panel, and runs on any standard web host with PHP 8.3+ (or PHP 8.0.2+ for the Grav 1.7 versions).</p>
     <p class="lede">Each shares the same portable Markdown files and optional Git Sync &ndash; Publishing Space, Course Hub, and MultiCourse Hub also support LMS-ready embedding for platforms like Canvas and Moodle. All four were refreshed in 2026 with a Dark Mode option, and the course hubs also gained the cleaner 2026 Modern look, with a tinted NavBar in each course&rsquo;s colour, and accessibility improvements.</p>
-    <p class="jump-links">Jump to: <a href="#choose-your-skeleton" class="tlink">Choose Your Skeleton</a> &middot; <a href="#git-page-link-plugin" class="tlink">Git Page Link Plugin</a></p>
+    <p class="jump-links">Jump to: <a href="#choose-your-skeleton" class="tlink">Choose Your Skeleton</a> &middot; <a href="#git-page-link-plugin" class="tlink">Git Page Link Plugin</a> &middot; <a href="#free-or-helios" class="tlink">Free or Grav Helios?</a></p>
     <hr class="hero-rule">
   </section>
 
@@ -225,7 +225,7 @@
         <ul class="feat-list">
           <li>Guides with section cards, parts, reading progress, Keep My Place, Learning Objectives &amp; OER attribution</li>
           <li>The same core page types and settings as Grav Helios Open Reader, so guides can move between the two</li>
-          <li>Pressbooks books can be imported with the free <a href="https://helios-pressbooks-converter.hibbittsdesign.org/" class="tlink" target="_blank" rel="noopener">Pressbooks Converter</a> (beta)</li>
+          <li>Pressbooks books can be converted with the free <a href="https://helios-pressbooks-converter.hibbittsdesign.org/" class="tlink" target="_blank" rel="noopener">Pressbooks Converter</a> (beta)</li>
           <li>A ready-to-go blog with featured posts, tags, archives &amp; Atom/RSS feeds</li>
           <li>Search with highlighted results, including a search box on each guide</li>
           <li>Built on Quark 2, Grav 2&rsquo;s modern theme, with Light, Dark &amp; Auto modes (Quark for Grav 1.7)</li>
@@ -337,9 +337,46 @@
       </div>
     </div>
 
-    <div class="grav-plugin">
-      <h2>Looking for the Premium Option?</h2>
-      <p>Grav Helios Open Reader and Grav Helios Course Hub share the same Markdown-and-Git-Sync foundation as these four skeletons, built on the Grav Premium Helios theme, adding a more refined design, a table of contents on pages, automatic single or multi-course setup and Common Cartridge import from Canvas or another LMS (Course Hub), and several publications on one site (Open Reader) &ndash; at the cost of a one-time Premium Helios theme license. Publishing a structured open textbook or guide? See <a href="grav-helios-open-reader.html" class="tlink">Grav Helios Open Reader</a>. Building a companion site for one or more courses? See <a href="grav-helios-course-hub.html" class="tlink">Grav Helios Course Hub</a>.</p>
+    <div class="grav-plugin" id="free-or-helios">
+      <h2>Free or Grav Helios?</h2>
+      <p>Grav Helios Open Reader and Grav Helios Course Hub are the premium siblings of these skeletons, built on the Grav Premium Helios theme (a one-time license) with a more refined, app-like design. Content moves easily between Open Publishing Space and Open Reader, and between the course hubs with a few adjustments, so you can start free and move later.</p>
+
+      <div class="compare-wrap">
+        <table class="compare-table">
+          <caption>Open guides and books</caption>
+          <thead>
+            <tr><th scope="col"><span class="sr-only">Feature</span></th><th scope="col">Open Publishing Space <span class="compare-tag">Free</span></th><th scope="col"><a href="grav-helios-open-reader.html" class="tlink">Helios Open Reader</a></th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Cost</th><td>Free, MIT license</td><td>Free skeleton, plus a one-time Premium Helios theme license ($50)</td></tr>
+            <tr><th scope="row">Grav</th><td>Grav 2 (Quark 2) and 1.7 (Quark)</td><td>Grav 2</td></tr>
+            <tr><th scope="row">Best for</th><td>An open guide or book, with a blog and other pages alongside it</td><td>A dedicated reading site, with one or several publications</td></tr>
+            <tr><th scope="row">Reading</th><td>Section cards, parts, reading progress, Keep My Place</td><td>The same, plus a table of contents on pages and a sticky Previous/Next bar</td></tr>
+            <tr><th scope="row">Search</th><td>Site search, plus a search box for each guide</td><td>Site-wide search (&#8984;K)</td></tr>
+            <tr><th scope="row">Pressbooks conversion</th><td>Yes, with the Pressbooks Converter (beta)</td><td>Yes, with the Pressbooks Converter (beta)</td></tr>
+            <tr><th scope="row">LMS embedding</th><td>Yes</td><td>Yes</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="compare-wrap">
+        <table class="compare-table">
+          <caption>Course sites</caption>
+          <thead>
+            <tr><th scope="col"><span class="sr-only">Feature</span></th><th scope="col">Open Course Hub &amp; MultiCourse Hub <span class="compare-tag">Free</span></th><th scope="col"><a href="grav-helios-course-hub.html" class="tlink">Helios Course Hub</a></th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Cost</th><td>Free, MIT license</td><td>Free skeleton, plus a one-time Premium Helios theme license ($50)</td></tr>
+            <tr><th scope="row">Grav</th><td>Grav 2 and 1.7</td><td>Grav 2</td></tr>
+            <tr><th scope="row">Courses</th><td>One (Course Hub) or several (MultiCourse Hub)</td><td>One or several in a single install, set up automatically</td></tr>
+            <tr><th scope="row">Design</th><td>2026 Modern, with a tinted NavBar in each course&#8217;s colour</td><td>Helios&#8217;s app-like layout, with sidebar navigation and a table of contents on pages</td></tr>
+            <tr><th scope="row">LMS course conversion</th><td>Possible with the Cartridge Converter&#8217;s Standard Markdown option (beta), plus some manual adjustments</td><td>Yes, with the Cartridge Converter (beta), for Canvas, Moodle &amp; Brightspace courses</td></tr>
+            <tr><th scope="row">LMS embedding</th><td>Yes</td><td>Yes</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>Both share plain Markdown files, a browser-based Admin panel, optional Git Sync, Dark Mode, and the same content shortcodes and GitHub-style alerts, which is what lets content move between them.</p>
     </div>
 
     <div class="grav-plugin">
