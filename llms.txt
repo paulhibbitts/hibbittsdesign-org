@@ -30,7 +30,7 @@ All projects are free, open-source, and MIT licensed; none require a database. T
 Free, ongoing-beta converters for bringing existing course or book content into these tools. Each handles the common cases well but isn't a guaranteed complete migration.
 
 - [Docsify Cartridge Converter](https://docsify-common-cartridge-converter.hibbittsdesign.org/): Imports a Canvas, Moodle, or Brightspace Common Cartridge export into a ready-to-edit Docsify site, for use with either Docsify-This or the Docsify Starter Kits. Source: https://github.com/paulhibbitts/docsify-common-cartridge-converter
-- [Grav Helios Pressbooks Converter](https://helios-pressbooks-converter.hibbittsdesign.org/): Imports existing Pressbooks content into Grav Helios Open Reader. Source: https://github.com/paulhibbitts/grav-helios-pressbooks-converter
+- [Pressbooks Converter](https://pressbooks-converter.hibbittsdesign.org/): Imports existing Pressbooks content into Grav Helios Open Reader or the free Grav Open Publishing Space. Source: https://github.com/paulhibbitts/grav-helios-pressbooks-converter
 - [Grav Helios Cartridge Converter](https://helios-common-cartridge-converter.hibbittsdesign.org/): The same Common Cartridge import, built for Grav Helios Course Hub. Source: https://github.com/paulhibbitts/grav-helios-common-cartridge-converter
 
 ## Articles
