@@ -1,0 +1,324 @@
+<!doctype html>
+<!-- Developed with the assistance of Claude Code (claude.ai) -->
+<!-- Body copy on this page uses real, hand-written <a>/<strong> tags, not
+     Markdown syntax -- every link and emphasis exists in the raw HTML for
+     crawlers and visitors that don't execute JavaScript. -->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- GOOGLE ANALYTICS START (managed by tools/sync_boilerplate.py -- edit this file, not the copies inlined in each page) -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5BW4N72FHR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-5BW4N72FHR');
+</script>
+<!-- GOOGLE ANALYTICS END -->
+<link rel="icon" type="image/png" href="assets/icons/favicon.png">
+<link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+<meta name="theme-color" content="#fcfcfb" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#17181a" media="(prefers-color-scheme: dark)">
+
+<!-- ====================================================================
+     SITE METADATA — page title, search/social descriptions, structured data.
+     Shares a domain with the other pages (hibbittsdesign.org).
+     ==================================================================== -->
+<title>Grav CMS Projects at a Glance | HibbittsDesign.org</title>
+<meta name="description" content="Every HibbittsDesign Grav project on one map – open guides and books, course sites and documentation, free or Grav Premium Helios – plus the converters that bring content in from Pressbooks or an LMS.">
+<link rel="canonical" href="https://hibbittsdesign.org/grav-projects-at-a-glance.html">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://hibbittsdesign.org/grav-projects-at-a-glance.html">
+<meta property="og:title" content="Grav CMS Projects at a Glance | HibbittsDesign.org">
+<meta property="og:description" content="Every HibbittsDesign Grav project on one map – open guides and books, course sites and documentation, free or Grav Premium Helios – plus the converters that bring content in from Pressbooks or an LMS.">
+<meta property="og:image" content="https://hibbittsdesign.org/assets/icons/og-grav-projects-at-a-glance.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Four Grav CMS project demos: Grav Open Publishing Space and Grav Open Course Hub on top, and their Grav Premium Helios siblings, Open Reader and Course Hub, below">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@hibbittsdesign">
+<meta name="twitter:title" content="Grav CMS Projects at a Glance | HibbittsDesign.org">
+<meta name="twitter:description" content="Every HibbittsDesign Grav project on one map – open guides and books, course sites and documentation, free or Grav Premium Helios – plus the converters that bring content in from Pressbooks or an LMS.">
+<meta name="twitter:image" content="https://hibbittsdesign.org/assets/icons/og-grav-projects-at-a-glance.png">
+
+
+<!-- Public Sans and JetBrains Mono are self-hosted (assets/fonts/), not
+     loaded from Google Fonts, so the page has no external dependency and
+     works fully offline once deployed. See the @font-face rules at the
+     top of styles.css to swap in different fonts or weights. -->
+<link rel="stylesheet" href="assets/shared.css">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<div class="wrap">
+
+  <!-- ============ 1. HEADER / NAV ============ -->
+  <header class="site-head">
+    <span class="brand-line"><a class="brand" href="https://hibbittsdesign.org/"><img class="brand-mark" src="assets/icons/hd-logo.png" width="83" height="178" alt=""><span><strong>HibbittsDesign<wbr>.org</strong></span></a></span>
+    <nav>
+      <div class="nav-item">
+        <a href="index.html#projects" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false">Projects</a>
+        <div class="dropdown-menu">
+          <a href="docsify-this.html">Docsify&#8209;This</a>
+          <a href="docsify-starter-kits.html">Docsify Starter Kits</a>
+          <a href="grav-projects-at-a-glance.html">Grav CMS Projects at a Glance</a>
+          <a href="grav-open-publishing-space.html">Grav Open Publishing Space</a>
+          <a href="grav-open-course-hub.html">Grav Open Course Hub</a>
+          <a href="grav-helios-open-reader.html">Grav Helios Open Reader</a>
+          <a href="grav-helios-course-hub.html">Grav Helios Course Hub</a>
+          <a href="cost-free-grav-projects.html">More Cost-Free Grav Projects</a>
+        </div>
+      </div>
+      <a href="about.html">About Paul</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <!-- "Projects" dropdown: standard disclosure pattern. Tabbing to the
+         trigger does NOT open it by itself -- only an explicit activation
+         (click, or Enter on the focused link) toggles the .open class,
+         which is the single source of truth for visibility. This matters:
+         an earlier version also opened on :focus-within, which meant
+         Escape's "close and return focus to the trigger" put focus right
+         back on the one element that reopened it, so Escape silently did
+         nothing whenever focus was on a menu item rather than the trigger
+         itself. Keeping focus and openness independent avoids that. The
+         trigger's real href (index.html#projects) is the fallback if this
+         script doesn't run at all.
+         This script must stay nested inside the header element (not placed
+         after it), since sync_boilerplate.py's regex for this block stops
+         at the first closing header tag it finds -- placed outside, a
+         script here would be left behind as stale debris on the next
+         resync instead of being replaced along with everything else.
+         NOTE: do not spell out the literal opening/closing header markup
+         in this comment -- doing so once fooled that same regex into
+         matching too little and corrupting all pages using this partial. -->
+    <script>
+      document.querySelectorAll('.nav-item').forEach(function (item) {
+        var trigger = item.querySelector('.dropdown-trigger');
+        function setOpen(open) {
+          item.classList.toggle('open', open);
+          trigger.setAttribute('aria-expanded', open ? 'true' : 'false');
+        }
+        trigger.addEventListener('click', function (e) {
+          e.preventDefault();
+          setOpen(!item.classList.contains('open'));
+        });
+        item.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape' && item.classList.contains('open')) {
+            setOpen(false);
+            trigger.focus();
+          }
+        });
+        item.addEventListener('focusout', function (e) {
+          if (!item.contains(e.relatedTarget)) { setOpen(false); }
+        });
+        document.addEventListener('click', function (e) {
+          if (!item.contains(e.target) && item.classList.contains('open')) { setOpen(false); }
+        });
+      });
+    </script>
+  </header><!-- ============ 2. GRAV CMS PROJECTS AT A GLANCE — one map of every Grav project: what it's for (rows), free or Helios (columns), and the converters that bring content in ============ -->
+  <section class="hero">
+    <div class="badge-row eyebrow-row">
+      <span class="badge green">Grav CMS Projects</span>
+      <span class="badge plain">Free or Premium Helios</span>
+      <span class="badge plain">One Markdown format</span>
+    </div>
+    <h1>Grav CMS Projects at a Glance</h1>
+    <p class="lede">Pick a row for what you&#8217;re making, then a column for how you&#8217;d like to run it. Every project uses the same portable Markdown files, so you can start free and move to Premium Helios later, or bring content in from Pressbooks or your LMS.</p>
+    <hr class="hero-rule">
+  </section>
+
+  <section class="choose-map" aria-labelledby="map-heading">
+    <h2 id="map-heading" class="sr-only">The Grav CMS projects, by what you&#8217;re making</h2>
+
+    <!-- Column headings, shown above the grid on wider screens. On phones each card says
+         Free or Helios itself, so these are hidden from screen readers to avoid repeating it. -->
+    <div class="map-cols" aria-hidden="true">
+      <span></span>
+      <p class="map-col-head"><strong>Free</strong> MIT license &middot; Grav 2 &amp; 1.7</p>
+      <p class="map-col-head"><strong>Premium Helios</strong> one-time Helios theme license ($50 per site) &middot; Grav 2</p>
+    </div>
+
+    <!-- Row 1: open guides and books -->
+    <div class="map-row">
+      <h3 class="map-need">An open guide or book</h3>
+      <article class="map-card">
+        <p class="map-kind">Free</p>
+        <h4><a href="grav-open-publishing-space.html" class="tlink">Open Publishing Space</a></h4>
+        <p>An open guide or book site &ndash; such as a course reader, handbook, or short open textbook &ndash; with a blog and almost any other Grav page alongside it.</p>
+        <p class="map-links"><a href="https://demo.hibbittsdesign.org/grav-open-publishing-quark2/" class="tlink" target="_blank" rel="noopener">Demo</a></p>
+      </article>
+      <p class="map-move" aria-hidden="true">&rarr;</p>
+      <article class="map-card">
+        <p class="map-kind">Premium Helios</p>
+        <h4><a href="grav-helios-open-reader.html" class="tlink">Helios Open Reader</a></h4>
+        <p>A dedicated reading site for one or several publications, with a table of contents beside every page.</p>
+        <p class="map-links"><a href="https://demo.hibbittsdesign.org/grav-helios-open-reader/" class="tlink" target="_blank" rel="noopener">Demo</a></p>
+      </article>
+      <p class="map-note">Guides move between the two unchanged.</p>
+    </div>
+
+    <!-- Row 2: course sites. Open Course Hub and Open MultiCourse Hub both lead to Helios Course Hub,
+         which handles one or several courses, so its card spans both free cards -->
+    <div class="map-row map-row-courses">
+      <h3 class="map-need">A course site</h3>
+      <div class="map-stack">
+        <article class="map-card">
+          <p class="map-kind">Free &middot; one course</p>
+          <h4><a href="grav-open-course-hub.html" class="tlink">Open Course Hub</a></h4>
+          <p>One course, with modules or weekly units and an optional course blog.</p>
+          <p class="map-links"><a href="https://demo.hibbittsdesign.org/grav-open-course-hub" class="tlink" target="_blank" rel="noopener">Demo</a></p>
+        </article>
+        <article class="map-card">
+          <p class="map-kind">Free &middot; several courses</p>
+          <h4><a href="grav-open-course-hub.html#multicourse" class="tlink">Open MultiCourse Hub</a></h4>
+          <p>Several courses in one site, each with its own navigation, colours and sidebar.</p>
+          <p class="map-links"><a href="https://demo.hibbittsdesign.org/grav-open-multi-course-hub" class="tlink" target="_blank" rel="noopener">Demo</a></p>
+        </article>
+      </div>
+      <p class="map-move" aria-hidden="true">&rarr;</p>
+      <article class="map-card">
+        <p class="map-kind">Premium Helios &middot; one or several courses</p>
+        <h4><a href="grav-helios-course-hub.html" class="tlink">Helios Course Hub</a></h4>
+        <p>One or several courses in a single install, with modules at the centre and Helios&#8217;s app-like layout.</p>
+        <p class="map-links"><a href="https://demo.hibbittsdesign.org/grav-helios-course-hub/" class="tlink" target="_blank" rel="noopener">Demo</a></p>
+      </article>
+      <p class="map-note">Course content moves across with a few adjustments.</p>
+    </div>
+
+    <!-- Row 3: documentation. On the Helios side, the Grav Premium Helios theme itself is the documentation theme
+         (made by the Grav team, not a HibbittsDesign project) -->
+    <div class="map-row">
+      <h3 class="map-need">Documentation</h3>
+      <article class="map-card">
+        <p class="map-kind">Free</p>
+        <h4><a href="cost-free-grav-projects.html#grav-learn2-git-sync" class="tlink">Learn2 with Git Sync</a></h4>
+        <p>A documentation site on the free Learn2 theme, with built-in search and RSS/Atom feeds.</p>
+        <p class="map-links"><a href="https://demo.hibbittsdesign.org/grav-learn2-git-sync/" class="tlink" target="_blank" rel="noopener">Demo</a></p>
+      </article>
+      <p class="map-move" aria-hidden="true">&rarr;</p>
+      <article class="map-card">
+        <p class="map-kind">Premium Helios</p>
+        <h4><a href="https://getgrav.org/premium/helios" class="tlink" target="_blank" rel="noopener">Grav Premium Helios theme</a></h4>
+        <p>The Helios theme on its own is designed for documentation sites, by the Grav team.</p>
+      </article>
+    </div>
+
+    <!-- Ways in: the two converters, and which projects each one feeds -->
+    <div class="map-ways">
+      <h3>Ways in</h3>
+      <ul>
+        <li><a href="https://pressbooks-converter.hibbittsdesign.org/" class="tlink" target="_blank" rel="noopener">Pressbooks Converter</a> (beta) &ndash; a Pressbooks book &rarr; Open Publishing Space or Helios Open Reader</li>
+        <li><a href="https://common-cartridge-converter.hibbittsdesign.org/" class="tlink" target="_blank" rel="noopener">Common Cartridge Converter</a> (beta) &ndash; a Canvas, Moodle, Brightspace or Blackboard course &rarr; Open Course Hub (modules), Open MultiCourse Hub (a whole course) or Helios Course Hub</li>
+      </ul>
+      <p>Both are on the <a href="https://grav-converters.hibbittsdesign.org/" class="tlink" target="_blank" rel="noopener">Grav Converters</a> page.</p>
+    </div>
+
+    <!-- Free or Grav Helios, feature by feature (moved here from the Cost-Free page) -->
+    <div class="grav-plugin" id="free-or-helios">
+      <h2>Free or Grav Premium Helios? Compare in Detail</h2>
+      <p>The free projects have premium siblings, Grav Helios Open Reader and Grav Helios Course Hub, built on the Grav Premium Helios theme (a one-time license) with a more refined, app-like design. Content moves easily between Open Publishing Space and Open Reader, and between the course hubs with a few adjustments, so you can start free and move later. <a href="grav-projects-at-a-glance.html" class="tlink">Grav CMS Projects at a Glance</a> shows them all side by side.</p>
+
+      <div class="compare-wrap">
+        <table class="compare-table">
+          <caption>Open guides and books</caption>
+          <thead>
+            <tr><th scope="col"><span class="sr-only">Feature</span></th><th scope="col"><a href="grav-open-publishing-space.html" class="tlink">Open Publishing Space</a> <span class="compare-tag">Free</span></th><th scope="col"><a href="grav-helios-open-reader.html" class="tlink">Helios Open Reader</a></th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Cost</th><td>Free, MIT license</td><td>Free skeleton, plus a one-time Premium Helios theme license ($50 per site)</td></tr>
+            <tr><th scope="row">Grav</th><td>Grav 2 (Quark 2) and 1.7 (Quark)</td><td>Grav 2</td></tr>
+            <tr><th scope="row">Best for</th><td>One or several open guides or books, with a blog and other pages alongside them</td><td>A dedicated reading site, with one or several publications</td></tr>
+            <tr><th scope="row">Reading</th><td>Section cards, parts, reading progress, Keep My Place, an &#8220;On this page&#8221; list (with the Page TOC plugin), and a Previous/Next bar on phones</td><td>The same, plus a table of contents beside pages and a Previous/Next bar on all screen sizes</td></tr>
+            <tr><th scope="row">Search</th><td>Site search, plus a search box for each guide (/ jumps to it)</td><td>Site-wide search (/ or &#8984;K)</td></tr>
+            <tr><th scope="row">Pressbooks conversion</th><td>Yes, with the Pressbooks Converter (beta)</td><td>Yes, with the Pressbooks Converter (beta)</td></tr>
+            <tr><th scope="row">Markdown for reuse</th><td>A &#8220;This page as Markdown (.md)&#8221; link below the page content, plus an optional full text version of each guide (Grav 2 version)</td><td>The same link in the page footer, plus an optional full text version of each publication</td></tr>
+            <tr><th scope="row">LMS embedding</th><td>Yes</td><td>Yes</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="compare-wrap">
+        <table class="compare-table">
+          <caption>Course sites</caption>
+          <thead>
+            <tr><th scope="col"><span class="sr-only">Feature</span></th><th scope="col"><a href="grav-open-course-hub.html" class="tlink">Open Course Hub &amp; MultiCourse Hub</a> <span class="compare-tag">Free</span></th><th scope="col"><a href="grav-helios-course-hub.html" class="tlink">Helios Course Hub</a></th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Cost</th><td>Free, MIT license</td><td>Free skeleton, plus a one-time Premium Helios theme license ($50 per site)</td></tr>
+            <tr><th scope="row">Grav</th><td>Grav 2 and 1.7</td><td>Grav 2</td></tr>
+            <tr><th scope="row">Courses</th><td>One (Course Hub) or several (MultiCourse Hub)</td><td>One or several in a single install, set up automatically</td></tr>
+            <tr><th scope="row">Modules</th><td>Modules at the centre of each course, with an optional course blog</td><td>Modules at the centre of each course</td></tr>
+            <tr><th scope="row">Design</th><td>2026 Modern, with a tinted NavBar in each course&#8217;s colour</td><td>Helios&#8217;s app-like layout, with sidebar navigation and a table of contents on pages</td></tr>
+            <tr><th scope="row">LMS course conversion</th><td>Yes, with the Common Cartridge Converter (beta): modules for Course Hub, or a whole course for MultiCourse Hub</td><td>Yes, with the Common Cartridge Converter (beta)</td></tr>
+            <tr><th scope="row">LMS embedding</th><td>Yes</td><td>Yes</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>Both share plain Markdown files, a browser-based Admin panel, optional Git Sync, Dark Mode, and the same content shortcodes and GitHub-style alerts, which is what lets content move between them.</p>
+    </div>
+
+    <!-- The product names above are the ones to look for; the themes and plugins underneath are listed here once -->
+    <p class="map-under"><strong>Under the hood:</strong> Open Publishing Space uses the Quark 2 Open Publishing theme (Grav 2) or Quark Open Publishing (Grav 1.7); Open Course Hub and Open MultiCourse Hub use the Bootstrap4 Open Matter theme; Helios Open Reader and Helios Course Hub are plugins for the Grav Premium Helios theme. For a side-by-side comparison, see <a href="#free-or-helios" class="tlink">Free or Grav Premium Helios? Compare in Detail</a> below</p>
+  </section>
+
+
+  <!-- ============ 3. FOOTER — byline + links ============ -->
+  <footer>
+    <div class="fmap">
+      <div class="fmap-col">
+        <p class="fmap-label">Projects</p>
+        <a href="docsify-this.html">Docsify&#8209;This</a>
+        <a href="docsify-starter-kits.html">Docsify Starter Kits</a>
+        <a href="grav-projects-at-a-glance.html">Grav CMS Projects at a Glance</a>
+        <a href="grav-open-publishing-space.html">Grav Open Publishing Space</a>
+        <a href="grav-open-course-hub.html">Grav Open Course Hub</a>
+        <a href="grav-helios-open-reader.html">Grav Helios Open Reader</a>
+        <a href="grav-helios-course-hub.html">Grav Helios Course Hub</a>
+        <a href="cost-free-grav-projects.html">More Cost-Free Grav Projects</a>
+      </div>
+      <div class="fmap-col">
+        <p class="fmap-label">Resources</p>
+        <p class="fmap-sublabel">Guides</p>
+        <a href="docsify-this-tutorials-workshops.html">Docsify&#8209;This Tutorials &amp; Workshops</a>
+        <a href="creating-github-course-notes.html">Creating GitHub Course Notes for Docsify&#8209;This</a>
+        <a href="viewing-github-course-notes.html">Viewing an Instructor's GitHub Course Notes with Docsify&#8209;This</a>
+        <p class="fmap-sublabel">Design Notes</p>
+        <a href="systems-oriented-design.html">Systems-Oriented Design in Practice</a>
+        <a href="architecture-beneath-the-user-experience.html">The Architecture Beneath the User Experience</a>
+        <a href="open-source-with-a-positive-vibe.html">Open Source with a Positive Vibe</a>
+        <a href="dual-purpose-documentation-framework.html">A Dual-Purpose Documentation Framework</a>
+        <a href="quick-acid-test-product-design-knowledge.html">A Quick Acid Test for Your Product Design Knowledge</a>
+      </div>
+      <div class="fmap-col">
+        <p class="fmap-label">Info</p>
+        <a href="about.html">About Paul</a>
+        <a href="services.html">Services</a>
+        <a href="testimonials.html">Testimonials</a>
+        <a href="contact.html">Contact</a>
+        <a href="design-origins.html">Design Origins</a>
+      </div>
+    </div>
+    <div class="fcolophon">
+      <p>Designed and built by <a href="about.html" class="tlink">Paul Hibbitts</a>. All projects are open source and MIT licensed. If one is useful to you, a GitHub &#9733; helps someone else find it. Questions or need help? <a href="contact.html" class="tlink">Get in touch</a> &ndash; or see <a href="services.html" class="tlink">Services</a> for professional support&nbsp;options.</p>
+      <div class="ffollow">
+        <p class="fmap-label">Follow</p>
+        <div class="flinks">
+          <a href="https://github.com/hibbitts-design" target="_blank" rel="noopener"><span class="ficon ficon-github" aria-hidden="true"></span> GitHub</a>
+          <a href="https://mastodon.social/@hibbittsdesign" target="_blank" rel="noopener"><span class="ficon ficon-mastodon" aria-hidden="true"></span> Mastodon</a>
+          <a href="https://bsky.app/profile/hibbittsdesign.org" target="_blank" rel="noopener"><span class="ficon ficon-bluesky" aria-hidden="true"></span> Bluesky</a>
+          <a href="https://ca.linkedin.com/in/paulhibbitts" target="_blank" rel="noopener"><span class="ficon ficon-linkedin" aria-hidden="true"></span> LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+
+</body>
+</html>

@@ -44,7 +44,7 @@
 <meta name="twitter:description" content="Open-source tools for turning Markdown files into published websites – from instant Markdown publishing to fully customizable CMS sites.">
 <meta name="twitter:image" content="https://hibbittsdesign.org/assets/icons/og-image.png">
 
-<!-- Structured data for search engines — one entry per project, mirrors the four cards below -->
+<!-- Structured data for search engines — one entry per project card below, in the same order -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -84,20 +84,50 @@
     {
       "@type": "SoftwareApplication",
       "position": 3,
-      "name": "Grav Helios Course Hub",
-      "url": "https://demo.hibbittsdesign.org/grav-helios-course-hub/",
-      "codeRepository": "https://github.com/hibbitts-design/grav-skeleton-helios-course-hub",
-      "description": "A single- or multi-course hub CMS built on Grav, for educators publishing portable, file-based course sites. Requires the paid Grav Premium Helios theme.",
+      "name": "Grav Open Publishing Space",
+      "url": "https://hibbittsdesign.org/grav-open-publishing-space.html",
+      "codeRepository": "https://github.com/hibbitts-design/grav-skeleton-open-publishing-space",
+      "description": "A free, open-source Grav CMS site for open guides and books, with a blog and other pages alongside them.",
+      "applicationCategory": "WebApplication",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "position": 4,
+      "name": "Grav Open Course Hub",
+      "url": "https://hibbittsdesign.org/grav-open-course-hub.html",
+      "codeRepository": "https://github.com/hibbitts-design/grav-skeleton-course-hub",
+      "description": "A free, open-source Grav CMS course site, with modules or weekly units and a course blog, that embeds in any LMS.",
+      "applicationCategory": "WebApplication",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "position": 5,
+      "name": "Grav Helios Open Reader",
+      "url": "https://demo.hibbittsdesign.org/grav-helios-open-reader/",
+      "codeRepository": "https://github.com/hibbitts-design/grav-skeleton-helios-open-reader",
+      "description": "A web-first, database-free open reader platform for publishing open textbooks and OER, built on Grav CMS. Requires the paid Grav Premium Helios theme.",
       "applicationCategory": "WebApplication",
       "operatingSystem": "Web"
     },
     {
       "@type": "SoftwareApplication",
-      "position": 4,
-      "name": "Grav Helios Open Reader",
-      "url": "https://demo.hibbittsdesign.org/grav-helios-open-reader/",
-      "codeRepository": "https://github.com/hibbitts-design/grav-skeleton-helios-open-reader",
-      "description": "A web-first, database-free open reader platform for publishing open textbooks and OER, built on Grav CMS. Requires the paid Grav Premium Helios theme.",
+      "position": 6,
+      "name": "Grav Helios Course Hub",
+      "url": "https://demo.hibbittsdesign.org/grav-helios-course-hub/",
+      "codeRepository": "https://github.com/hibbitts-design/grav-skeleton-helios-course-hub",
+      "description": "A single- or multi-course hub CMS built on Grav, for educators publishing portable, file-based course sites. Requires the paid Grav Premium Helios theme.",
       "applicationCategory": "WebApplication",
       "operatingSystem": "Web"
     }
@@ -133,9 +163,11 @@
        2. HERO                — headline, subhead, markdown-to-published demo
        3. LADDER               — "three levels of capability" step copy
        4. PICKER               — "which one do I need?" Q&A rows
-       5. PROJECT CARDS (x4)   — Docsify-This, Starter Kits, (Docsify Cartridge Converter),
-                                 Open Reader, Course Hub, (Grav Helios Import Converters)
-       6. FREE GRAV SKELETONS  — the four no-cost Grav alternatives, plus the Git Page Link plugin
+       5. PROJECT CARDS (x6)   — Docsify-This, Starter Kits, (Docsify Cartridge Converter),
+                                 Open Publishing Space, Open Course Hub (the free Grav projects),
+                                 then Helios Open Reader, Helios Course Hub (their Grav Premium
+                                 Helios step ups), (Grav Converters)
+       6. MORE FREE GRAV CMS   — the Git Page Link plugin and Learn2 with Git Sync
        7. FOOTER               — byline + links
      Search for the "====" banners below to jump to any section. Styling lives
      in assets/styles.css and shouldn't need to change when only editing text.
@@ -152,9 +184,12 @@
         <div class="dropdown-menu">
           <a href="docsify-this.html">Docsify&#8209;This</a>
           <a href="docsify-starter-kits.html">Docsify Starter Kits</a>
+          <a href="grav-projects-at-a-glance.html">Grav CMS Projects at a Glance</a>
+          <a href="grav-open-publishing-space.html">Grav Open Publishing Space</a>
+          <a href="grav-open-course-hub.html">Grav Open Course Hub</a>
           <a href="grav-helios-open-reader.html">Grav Helios Open Reader</a>
           <a href="grav-helios-course-hub.html">Grav Helios Course Hub</a>
-          <a href="cost-free-grav-projects.html">Cost-Free Grav Projects</a>
+          <a href="cost-free-grav-projects.html">More Cost-Free Grav Projects</a>
         </div>
       </div>
       <a href="about.html">About Paul</a>
@@ -213,7 +248,7 @@
     </div>
     <h1 class="essay-title">Where Systems&#8209;Oriented UX Shapes Open Source</h1>
     <p style="margin:16px 0 0;font-size:1.9rem;line-height:1.3;color:var(--ink-soft);font-weight:600;max-width:56ch;">Your Markdown, Published Your Way</p>
-    <p class="lede">Pick your level of publishing capability &ndash; no build step, full portability &ndash; powered by <a href="https://docsify.js.org/" class="tlink" target="_blank" rel="noopener">Docsify</a> (31.5k &#9733;s) or <a href="https://getgrav.org/" class="tlink" target="_blank" rel="noopener">Grav</a> (15.7k &#9733;s): publish instantly with Docsify-This, launch a site on GitHub Pages with a Docsify Starter Kit, or level up to Grav for a full CMS. Everything here is free and open-source, including the Grav Helios skeletons, which require the paid Premium Helios theme. Built by <a href="about.html" class="tlink">Paul Hibbitts</a>, drawing on over 25 years of software interaction design, UX consulting, and university teaching experience.</p>
+    <p class="lede">Pick your level of publishing capability &ndash; no build step, full portability &ndash; powered by <a href="https://docsify.js.org/" class="tlink" target="_blank" rel="noopener">Docsify</a> (31.5k &#9733;s) or <a href="https://getgrav.org/" class="tlink" target="_blank" rel="noopener">Grav</a> (15.7k &#9733;s): publish instantly with Docsify-This, launch a site on GitHub Pages with a Docsify Starter Kit, or level up to Grav for a full CMS. Everything here is free and open source &ndash; including full Grav sites for open guides, books and courses, with optional Grav Premium Helios versions as a step up. Built by <a href="about.html" class="tlink">Paul Hibbitts</a>, drawing on over 25 years of software interaction design, UX consulting, and university teaching experience.</p>
     <p class="jump-links">Jump to: <a href="#toolkit" class="tlink">Three Levels of Capability</a> &middot; <a href="#projects" class="tlink">Projects in Detail</a></p>
 
     <!-- Sample markdown source (left, illustrative, not tied to a real file) and
@@ -260,7 +295,7 @@ Turn any Markdown file into a
   <!-- ============ 3. LADDER — "three levels of capability" step copy ============ -->
   <section class="ladder" id="toolkit">
     <h2>One idea, three levels of capability</h2>
-    <p class="lede">Start with Docsify-This to publish instantly, no setup required. Move to a Docsify Starter Kit when you want your own domain or custom CSS. Graduate to Grav Helios &ndash; Open Reader or Course Hub, depending on what you're publishing &ndash; when you want a full CMS with an admin panel. Your content stays as plain Markdown files you control, portable across every option below.</p>
+    <p class="lede">Start with Docsify-This to publish instantly, no setup required. Move to a Docsify Starter Kit when you want your own domain or custom CSS. Graduate to Grav when you want a full CMS with an admin panel &ndash; start free with Open Publishing Space or Open Course Hub, and step up to Grav Premium Helios for its more polished, app-like design. Your content stays as plain Markdown files you control, portable across every option below.</p>
     <div class="track">
       <!-- Category 1: Docsify-This -->
       <div class="stop tk">
@@ -276,12 +311,12 @@ Turn any Markdown file into a
         <h3>Docsify Starter Kits</h3>
         <p>A whole repository, your own domain and CSS, zero build step</p>
       </div>
-      <!-- Category 3: Grav Helios (Open Reader & Course Hub) -->
+      <!-- Category 3: Grav CMS Projects (free, with Grav Helios versions as a step up) -->
       <div class="stop am">
         <div class="marker" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"/><path d="M4 6l8 0"/><path d="M16 6l4 0"/><path d="M6 12a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"/><path d="M4 12l2 0"/><path d="M10 12l10 0"/><path d="M15 18a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"/><path d="M4 18l11 0"/><path d="M19 18l1 0"/></svg></div>
-        <p class="label">Full CMS &middot; <a href="https://getgrav.org" target="_blank" rel="noopener">Grav</a> Helios</p>
-        <h3>Open Reader &amp; Course Hub</h3>
-        <p>A flat-file CMS (Grav) with a full admin panel, no database required</p>
+        <p class="label">Full CMS &middot; <a href="https://getgrav.org" target="_blank" rel="noopener">Grav</a></p>
+        <h3>Grav CMS Projects</h3>
+        <p>A flat-file CMS with a full admin panel, no database required &ndash; free, or Premium Helios</p>
       </div>
     </div>
   </section>
@@ -299,16 +334,20 @@ Turn any Markdown file into a
     </div>
     <div class="prow">
       <p class="q"><strong>I'm publishing an open textbook or other long-form OER (open educational resource)</strong> and want a web-first reader experience, with a full admin panel, no database required.</p>
-      <a class="a am" href="#open-reader">Grav Helios Open Reader</a>
+      <a class="a am" href="#open-guides">Grav Open Guides &amp; Books</a>
     </div>
     <div class="prow">
       <p class="q"><strong>I'm building a single or multiple course site</strong> and want a modern course home for my students, or Markdown content to embed in my LMS, with a full admin panel, no database required.</p>
-      <a class="a am" href="#course-hub">Grav Helios Course Hub</a>
+      <a class="a am" href="#course-sites">Grav Course Sites</a>
+    </div>
+    <div class="prow">
+      <p class="q"><strong>I'd like to compare every Grav project,</strong> free or Premium Helios &ndash; on one map.</p>
+      <a class="a am" href="grav-projects-at-a-glance.html">Grav CMS Projects at a Glance</a>
     </div>
   </section>
 
   <!-- ============ 5. PROJECT CARDS — Docsify-This, Starter Kits, (Docsify Cartridge Converter),
-       Open Reader, Course Hub, (Grav Helios Import Converters) ============ -->
+       Open Reader, Course Hub, (Grav Converters) ============ -->
   <section class="projects" id="projects">
     <h2 class="sr-only">Projects</h2>
 
@@ -452,17 +491,92 @@ Turn any Markdown file into a
       </div>
     </div>
 
-    <!-- Card 3: Grav Helios Open Reader -->
+    <!-- Card 3: Open Guides & Books – the free Grav Open Publishing Space first, then its Grav Helios step up,
+         Open Reader. Guides move between the two unchanged. -->
+    <article class="project am" id="open-guides">
+      <div class="project-head">
+        <div class="icon-tile" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 19a9 9 0 0 1 9 0a9 9 0 0 1 9 0"/><path d="M3 6a9 9 0 0 1 9 0a9 9 0 0 1 9 0"/><path d="M3 6l0 13"/><path d="M12 6l0 13"/><path d="M21 6l0 13"/></svg></div>
+        <span class="project-tag">Full CMS &middot; Grav</span>
+        <div class="badge-row">
+          <span class="badge am"><span aria-hidden="true">&#9733;</span> 27</span>
+          <span class="badge am">Cost-Free</span>
+        </div>
+        <div class="project-thumb"><a href="https://demo.hibbittsdesign.org/grav-open-publishing-quark2/" target="_blank" rel="noopener"><img src="assets/screenshots/grav-open-publishing-thumb.webp" width="800" height="639" alt="Screenshot of the Grav Open Publishing Space home page on the Quark 2 theme, showing an open guide with a cover image beside its title and details, a Start Reading button, and section cards"></a></div>
+      </div>
+      <div class="project-body">
+        <h3>Grav Open Publishing Space <span class="version-tag">Free &middot; Grav 2 &amp; 1.7</span></h3>
+        <p>An open guide or book site &ndash; such as a course reader, handbook, or short open textbook &ndash; with a blog and almost any other Grav page alongside it. Content lives as ordinary Markdown files, with a browser-based admin panel and no database.</p>
+        <ul class="feat-list">
+          <li>Section cards, parts, reading progress, Keep My Place &amp; a Previous/Next bar on phones</li>
+          <li>Search with a box on each guide, Learning Objectives &amp; OER attribution</li>
+          <li>A &ldquo;This page as Markdown&rdquo; link and an optional full text version of each guide, ready to reuse</li>
+          <li>Free <a href="https://pressbooks-converter.hibbittsdesign.org/" class="tlink" target="_blank" rel="noopener">Pressbooks Converter</a> imports your existing books (beta)</li>
+          <li>Embeds in Canvas, Moodle &amp; Brightspace &ndash; no special integration needed</li>
+          <li>A ready-to-go blog, and Light, Dark &amp; Auto modes on Grav 2&rsquo;s Quark 2 theme</li>
+        </ul>
+        <p class="projects-foot"><a href="grav-open-publishing-space.html">Learn more<span class="sr-only"> about Grav Open Publishing Space</span> &rarr;</a></p>
+        <div class="links">
+          <a class="cta am" href="https://demo.hibbittsdesign.org/grav-open-publishing-quark2/" target="_blank" rel="noopener"><span class="arrow">&rarr;</span> See the demo</a>
+          <a class="cta plain" href="https://getgrav.org/downloads/skeletons#open-publishing-space-site" target="_blank" rel="noopener">Download</a>
+          <a class="cta plain" href="https://github.com/hibbitts-design/grav-skeleton-open-publishing-space" target="_blank" rel="noopener">View on GitHub</a>
+        </div>
+        <!-- A pointer to the Grav Premium Helios step up, Open Reader (card 5, below) -->
+        <div class="step-up">
+          <p class="step-up-label">Step up &middot; Grav Premium Helios</p>
+          <p><a href="#open-reader" class="tlink">Grav Helios Open Reader</a> (below) is the dedicated reading site version, with a table of contents beside every page &ndash; your guides move across unchanged.</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- Card 4: Course Sites – the free Grav Open Course Hub (and Open MultiCourse Hub for several courses) first,
+         then their Grav Helios step up, Course Hub. -->
+    <article class="project am" id="course-sites">
+      <div class="project-head">
+        <div class="icon-tile" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 9l-10 -4l-10 4l10 4l10 -4v6"/><path d="M6 10.6v5.4a6 3 0 0 0 12 0v-5.4"/></svg></div>
+        <span class="project-tag">Full CMS &middot; Grav</span>
+        <div class="badge-row">
+          <span class="badge am"><span aria-hidden="true">&#9733;</span> 47</span>
+          <span class="badge am">Cost-Free</span>
+        </div>
+        <div class="project-thumb"><a href="https://demo.hibbittsdesign.org/grav-open-course-hub" target="_blank" rel="noopener"><img src="assets/screenshots/grav-open-course-hub-thumb.webp" width="800" height="639" alt="Screenshot of the Grav Open Course Hub home page, showing a header photo, Modules and Blog in the course navigation, and links to this week's module"></a></div>
+      </div>
+      <div class="project-body">
+        <h3>Grav Open Course Hub <span class="version-tag">Free &middot; Grav 2 &amp; 1.7</span></h3>
+        <p>A free, open home on the web for a single course, inside or outside your LMS &ndash; plain Markdown files, a browser-based admin panel, and no database.</p>
+        <ul class="feat-list">
+          <li>A Home page with this week&rsquo;s reminders, modules or weekly units, and an optional course blog</li>
+          <li>Course search, a topics index, badges, and course content blocks like Learning Objectives</li>
+          <li>Embeds in Canvas, Moodle &amp; Brightspace &ndash; no special integration needed</li>
+          <li>Free <a href="https://common-cartridge-converter.hibbittsdesign.org/" class="tlink" target="_blank" rel="noopener">Common Cartridge Converter</a> imports Canvas, Moodle &amp; Brightspace courses (beta)</li>
+          <li>2026 Modern style in your course colour, with optional Dark Mode</li>
+          <li><strong>Several courses?</strong> <a href="grav-open-course-hub.html#multicourse" class="tlink">Grav Open MultiCourse Hub</a> gives each course its own look, from one site (<a href="https://demo.hibbittsdesign.org/grav-open-multi-course-hub" class="tlink" target="_blank" rel="noopener">demo</a>)</li>
+        </ul>
+        <p class="projects-foot"><a href="grav-open-course-hub.html">Learn more<span class="sr-only"> about Grav Open Course Hub</span> &rarr;</a></p>
+        <div class="links">
+          <a class="cta am" href="https://demo.hibbittsdesign.org/grav-open-course-hub" target="_blank" rel="noopener"><span class="arrow">&rarr;</span> See the demo</a>
+          <a class="cta plain" href="https://getgrav.org/downloads/skeletons#course-hub-site" target="_blank" rel="noopener">Download</a>
+          <a class="cta plain" href="https://github.com/hibbitts-design/grav-skeleton-course-hub" target="_blank" rel="noopener">View on GitHub</a>
+        </div>
+        <!-- A pointer to the Grav Premium Helios step up, Course Hub (card 6, below) -->
+        <div class="step-up">
+          <p class="step-up-label">Step up &middot; Grav Premium Helios</p>
+          <p><a href="#course-hub" class="tlink">Grav Helios Course Hub</a> (below) runs one or several courses in Helios&rsquo;s app-like layout &ndash; your course content moves across with a few adjustments.</p>
+        </div>
+      </div>
+    </article>
+
+
+    <!-- Card 5: Grav Helios Open Reader – the Grav Premium Helios step up from Open Publishing Space (card 3) -->
     <article class="project am" id="open-reader">
       <div class="project-head">
         <div class="icon-tile" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 19a9 9 0 0 1 9 0a9 9 0 0 1 9 0"/><path d="M3 6a9 9 0 0 1 9 0a9 9 0 0 1 9 0"/><path d="M3 6l0 13"/><path d="M12 6l0 13"/><path d="M21 6l0 13"/></svg></div>
-        <span class="project-tag">Full CMS &middot; Grav Helios</span>
+        <span class="project-tag">Full CMS &middot; Grav Premium Helios</span>
         <div class="badge-row"><span class="badge am">Made Possible by Premium Helios</span></div>
         <div class="project-thumb"><a href="https://demo.hibbittsdesign.org/grav-helios-open-reader/" target="_blank" rel="noopener"><img src="assets/screenshots/grav-open-reader-thumb.webp" width="800" height="639" alt="Screenshot of a Grav Helios Open Reader page, showing a section overview with a callout box and sidebar table of contents"></a></div>
       </div>
       <div class="project-body">
-        <h3>Grav Helios Open Reader</h3>
-        <p>A web-first reader skeleton for open textbooks and other long-form OER, built on the database-free Grav CMS and the <a href="https://getgrav.org/premium/helios" class="tlink" target="_blank" rel="noopener">Grav Premium Helios theme</a> ($50). Includes example reader content, the Helios Open Reader plugin, and a full admin panel – content still lives as ordinary Markdown files, not database rows.</p>
+        <h3>Grav Helios Open Reader <span class="version-tag">Premium Helios &middot; Grav 2</span></h3>
+        <p>A web-first reader skeleton for open textbooks and other long-form OER, built on the database-free Grav CMS and the <a href="https://getgrav.org/premium/helios" class="tlink" target="_blank" rel="noopener">Grav Premium Helios theme</a> ($50 per site). Includes example reader content, the Helios Open Reader plugin, and a full admin panel – content still lives as ordinary Markdown files, not database rows.</p>
         <ul class="feat-list">
           <li>"Keep My Place" reading position, a progress bar &amp; a table of contents that highlights where you are</li>
           <li>Full-text search, no-code callout blocks like Key Takeaways, plus an optional plain-text version for AI tools to read</li>
@@ -480,11 +594,11 @@ Turn any Markdown file into a
       </div>
     </article>
 
-    <!-- Card 4: Grav Helios Course Hub -->
+    <!-- Card 6: Grav Helios Course Hub – the Grav Premium Helios step up from Open Course Hub (card 4) -->
     <article class="project am" id="course-hub">
       <div class="project-head">
         <div class="icon-tile" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 9l-10 -4l-10 4l10 4l10 -4v6"/><path d="M6 10.6v5.4a6 3 0 0 0 12 0v-5.4"/></svg></div>
-        <span class="project-tag">Full CMS &middot; Grav Helios</span>
+        <span class="project-tag">Full CMS &middot; Grav Premium Helios</span>
         <div class="badge-row">
           <span class="badge am"><span aria-hidden="true">&#9733;</span> 6</span>
           <span class="badge am">Made Possible by Premium Helios</span>
@@ -492,13 +606,13 @@ Turn any Markdown file into a
         <div class="project-thumb"><a href="https://demo.hibbittsdesign.org/grav-helios-course-hub/" target="_blank" rel="noopener"><img src="assets/screenshots/grav-course-hub-thumb.webp" width="800" height="639" alt="Screenshot of a Grav Helios Course Hub course home page, showing upcoming due dates and required reading"></a></div>
       </div>
       <div class="project-body">
-        <h3>Grav Helios Course Hub</h3>
-        <p>A single- or multi-course hub skeleton for the <a href="https://getgrav.org/premium/helios" class="tlink" target="_blank" rel="noopener">Grav Premium Helios theme</a> ($50), for educators who want a modern course home without a database. Includes example course content, the Helios Course Hub plugin, and an admin panel for managing everything through the browser.</p>
+        <h3>Grav Helios Course Hub <span class="version-tag">Premium Helios &middot; Grav 2</span></h3>
+        <p>A single- or multi-course hub skeleton for the <a href="https://getgrav.org/premium/helios" class="tlink" target="_blank" rel="noopener">Grav Premium Helios theme</a> ($50 per site), for educators who want a modern course home without a database. Includes example course content, the Helios Course Hub plugin, and an admin panel for managing everything through the browser.</p>
         <ul class="feat-list">
           <li>Single or multi-course, with course cards, instructor names &amp; status badges</li>
           <li>Course-aware search and an auto-generated topics index</li>
           <li>Write in Markdown and embed directly in your LMS (Canvas, Moodle &amp; Brightspace) &ndash; no special integration needed</li>
-          <li>Free <a href="https://common-cartridge-converter.hibbittsdesign.org/" class="tlink" target="_blank" rel="noopener">Cartridge Converter</a> imports Canvas, Moodle &amp; Brightspace courses (beta)</li>
+          <li>Free <a href="https://common-cartridge-converter.hibbittsdesign.org/" class="tlink" target="_blank" rel="noopener">Common Cartridge Converter</a> imports Canvas, Moodle &amp; Brightspace courses (beta)</li>
           <li>Built on Grav 2 CMS &ndash; no database required, runs on almost any standard web host with PHP 8.3+</li>
           <li>Git Sync keeps your local files and live site matched automatically, plus a browser-based admin panel</li>
         </ul>
@@ -513,20 +627,21 @@ Turn any Markdown file into a
 
     <p class="projects-foot"><a href="testimonials.html">See what educators and users are saying &rarr;</a></p>
 
-    <!-- Grav Helios Import Converters -- closes out the Grav Helios pair (Open Reader +
-         Course Hub) the same way the Docsify converter closes out the Docsify pair
-         above, before the free Grav skeletons section. Placed after projects-foot so
+    <!-- Grav Converters -- closes out the Grav Helios pair (Open Reader + Course Hub)
+         the same way the Docsify converter closes out the Docsify pair above, before
+         the free Grav skeletons section. Both converters also feed the free Grav
+         skeletons, so the names stay neutral (as on grav-converters.hibbittsdesign.org). Placed after projects-foot so
          that link still reads as the direct capstone to the four core product cards,
          not to this supplementary tools box. -->
     <div class="tools">
       <div class="badge-row tools-badge"><span class="badge plain">Beta</span></div>
-      <h3>Grav Helios Import Converters</h3>
-      <p>Free tools that handle the common cases well, but course and book content varies enough that the result is a strong starting point to review and finish by hand, not a guaranteed one&#8209;click migration. Both are ongoing beta projects &ndash; not finished products, and likely to stay that way.</p>
+      <h3>Grav Converters</h3>
+      <p>Free tools that handle the common cases well, but course and book content varies enough that the result is a strong starting point to review and finish by hand, not a guaranteed one&#8209;click migration. Both are ongoing beta projects &ndash; not finished products, and likely to stay that way. See both on the <a href="https://grav-converters.hibbittsdesign.org/" class="tlink" target="_blank" rel="noopener">Grav Converters</a> page.</p>
       <div class="tools-list">
         <div class="tool">
           <div class="tool-text">
             <p class="tool-title">Pressbooks Converter</p>
-            <p class="tool-desc">Imports existing Pressbooks content into Open Reader, or the free Open Publishing Space.</p>
+            <p class="tool-desc">Imports a Pressbooks book into the free Open Publishing Space or Helios Open Reader.</p>
           </div>
           <div class="links">
             <a class="cta am" href="https://pressbooks-converter.hibbittsdesign.org/" target="_blank" rel="noopener"><span class="arrow">&rarr;</span> Try it</a>
@@ -535,8 +650,8 @@ Turn any Markdown file into a
         </div>
         <div class="tool">
           <div class="tool-text">
-            <p class="tool-title">Grav Helios Cartridge Converter</p>
-            <p class="tool-desc">The same Common Cartridge import as the Docsify converter above, built for Course Hub.</p>
+            <p class="tool-title">Common Cartridge Converter</p>
+            <p class="tool-desc">The same Common Cartridge import as the Docsify converter above, for the free Open Course Hub (modules) or Open MultiCourse Hub (a whole course), or Helios Course Hub.</p>
           </div>
           <div class="links">
             <a class="cta am" href="https://common-cartridge-converter.hibbittsdesign.org/" target="_blank" rel="noopener"><span class="arrow">&rarr;</span> Try it</a>
@@ -555,24 +670,22 @@ Turn any Markdown file into a
     <ul class="more-list">
       <li><a href="docsify-this.html">Docsify&#8209;This</a><span>&ndash; free and instant: turn a Markdown file into a page ready to embed, with LMS-ready page templates for Canvas and Moodle</span></li>
       <li><a href="docsify-starter-kits.html">Docsify Starter Kits</a><span>&ndash; a whole Markdown course site on GitHub Pages, with URL parameters for page-only display inside your LMS</span></li>
-      <li><a href="grav-helios-course-hub.html#markdown-and-your-lms">Grav Helios Course Hub</a><span>&ndash; embed any page with a URL parameter and no LTI setup, and start from an existing Canvas, Moodle, or Brightspace course export with the Cartridge Converter (beta)</span></li>
+      <li><a href="grav-open-course-hub.html">Grav Open Course Hub</a><span>&ndash; free: embed any page with a URL parameter and no LTI setup, and start from an existing Canvas, Moodle, or Brightspace course export with the Common Cartridge Converter (beta)</span></li>
+      <li><a href="grav-helios-course-hub.html#markdown-and-your-lms">Grav Helios Course Hub</a><span>&ndash; the same, on Grav Premium Helios, for one or several courses</span></li>
     </ul>
   </section>
 
-  <!-- ============ 6. FREE GRAV SKELETONS — the four no-cost Grav alternatives, plus the Git Page Link plugin ============ -->
+  <!-- ============ 6. MORE FREE GRAV CMS PROJECTS — Learn2 with Git Sync and the Git Page Link plugin (the free guide and course
+       projects now lead the Grav cards above) ============ -->
   <section class="more">
     <div class="badge-row more-badge"><span class="badge green">Free &amp; Open Source</span></div>
-    <h2>A Cost-Free Way to Use Grav CMS</h2>
-    <p>Helios Open Reader and Course Hub both build on the paid <a href="https://getgrav.org/premium/helios" class="tlink" target="_blank" rel="noopener">Grav Premium Helios theme</a> – a purchase that directly funds continued development of the open-source Grav CMS itself.</p>
-    <p>If you're looking for a completely free way to use Grav instead, these skeletons share the same Markdown-and-Git-Sync workflow and browser-based admin panel. They come with example content already in place, so you're editing rather than starting from a blank site. All four are built on free, open-source themes and the newly released Grav 2, which needs a web host running PHP 8.3+ (Grav 1.7 versions, for PHP 8.0.2+, are also available). There's also one more free plugin that pairs with any Grav site, skeleton or not. Open Publishing Space guides can move to Open Reader above, and the two course hubs to the paid Course Hub, if you outgrow them:</p>
+    <h2>More Free Grav CMS Projects</h2>
+    <p>Every Grav project shares the same Markdown-and-Git-Sync workflow and browser-based admin panel, with example content already in place, so you&rsquo;re editing rather than starting from a blank site. They run on Grav 2 (PHP 8.3+), with Grav 1.7 versions (PHP 8.0.2+) for the free projects.</p>
     <ul class="more-list">
-      <li><a href="https://github.com/hibbitts-design/grav-skeleton-open-publishing-space" target="_blank" rel="noopener">Open Publishing Space</a><span>&ndash; an open guide or book site, with a blog and other pages alongside it, on the free Quark 2 theme</span></li>
-      <li><a href="https://github.com/hibbitts-design/grav-skeleton-course-hub" target="_blank" rel="noopener">Open Course Hub</a><span>&ndash; a single-course hub with modules and a course blog</span></li>
-      <li><a href="https://github.com/hibbitts-design/grav-skeleton-multicourse-hub" target="_blank" rel="noopener">Open MultiCourse Hub</a><span>&ndash; the same, plus a top-level course-selection layer for managing several courses</span></li>
-      <li><a href="https://github.com/hibbitts-design/grav-skeleton-learn2-with-git-sync" target="_blank" rel="noopener">Learn2 with Git Sync</a><span>&ndash; documentation sites on the free Learn2 theme, with search and RSS/Atom feeds</span></li>
-      <li class="more-sep"><a href="https://github.com/hibbitts-design/grav-plugin-git-page-link" target="_blank" rel="noopener">Git Page Link Plugin</a><span>&ndash; adds an "Edit this Page" / "View Source" link back to the Markdown source, on most Grav themes</span></li>
+      <li><a href="https://github.com/hibbitts-design/grav-plugin-git-page-link" target="_blank" rel="noopener">Git Page Link Plugin</a><span>&ndash; adds an "Edit this Page" / "View Source" link back to the Markdown source, on most Grav themes</span></li>
+      <li><a href="https://github.com/hibbitts-design/grav-skeleton-learn2-with-git-sync" target="_blank" rel="noopener">Learn2 with Git Sync</a><span>&ndash; a documentation site</span></li>
     </ul>
-    <p class="more-foot"><a href="cost-free-grav-projects.html">Learn more<span class="sr-only"> about Cost-Free Grav Projects</span> &rarr;</a></p>
+    <p class="more-foot"><a href="cost-free-grav-projects.html">Learn more<span class="sr-only"> about More Cost-Free Grav Projects</span> &rarr;</a> &middot; <a href="grav-projects-at-a-glance.html">Compare all Grav projects at a glance &rarr;</a></p>
   </section>
 
   <!-- ============ 6b. CONTACT INVITATION — a low-key open door before the footer ============ -->
@@ -589,9 +702,12 @@ Turn any Markdown file into a
         <p class="fmap-label">Projects</p>
         <a href="docsify-this.html">Docsify&#8209;This</a>
         <a href="docsify-starter-kits.html">Docsify Starter Kits</a>
+        <a href="grav-projects-at-a-glance.html">Grav CMS Projects at a Glance</a>
+        <a href="grav-open-publishing-space.html">Grav Open Publishing Space</a>
+        <a href="grav-open-course-hub.html">Grav Open Course Hub</a>
         <a href="grav-helios-open-reader.html">Grav Helios Open Reader</a>
         <a href="grav-helios-course-hub.html">Grav Helios Course Hub</a>
-        <a href="cost-free-grav-projects.html">Cost-Free Grav Projects</a>
+        <a href="cost-free-grav-projects.html">More Cost-Free Grav Projects</a>
       </div>
       <div class="fmap-col">
         <p class="fmap-label">Resources</p>

@@ -995,3 +995,47 @@ footer .flinks a:focus-visible{color:var(--link);}
   .prow{grid-template-columns:1fr; justify-items:start; gap:10px; padding:20px 24px;}
   .fmap{grid-template-columns:1fr 1fr; gap:24px 20px;}
 }
+
+/* ---------- Grav CMS Projects at a Glance map (grav-projects-at-a-glance.html) ----------
+   What you're making (rows) by Free or Helios (columns), built from the site's own tokens,
+   so it follows light and dark mode automatically. */
+.choose-map{margin:0 0 56px;}
+/* three columns on wider screens: what you're making, Free, Helios (with a narrow arrow column between) */
+.map-cols,
+.map-row{display:grid; grid-template-columns:200px 1fr 36px 1fr; gap:14px; align-items:stretch;}
+.map-cols{margin:0 0 8px;}
+.map-col-head{grid-column:auto; margin:0; font-family:var(--font-mono); font-size:var(--text-min); color:var(--ink-faint);}
+.map-cols span{grid-column:1;}
+.map-cols .map-col-head:nth-child(3){grid-column:4;}
+.map-col-head strong{display:block; color:var(--ink); text-transform:uppercase; letter-spacing:0.04em;}
+.map-row{padding:18px 0; border-top:1px solid var(--line);}
+.map-need{margin:6px 0 0; font-size:1.15rem;}
+.map-card{background:var(--surface); border:1px solid var(--line); border-radius:var(--radius-lg); padding:16px 18px;}
+.map-card h4{margin:2px 0 6px; font-size:1.3rem;}
+.map-card p{margin:0 0 8px; color:var(--ink-soft); line-height:1.55;}
+.map-card .map-links{margin:0;}
+.map-kind{font-family:var(--font-mono); font-size:var(--text-min); text-transform:uppercase; letter-spacing:0.04em; color:var(--amber) !important;}
+.map-stack{display:flex; flex-direction:column; gap:14px;}
+.map-move{margin:0; align-self:center; text-align:center; font-size:1.4rem; color:var(--ink-faint);}
+/* the note under a row sits beneath the Free and Helios cards */
+.map-note{grid-column:2 / 5; margin:0; font-size:var(--text-min); color:var(--ink-faint);}
+.map-ways{margin:28px 0 0; padding:18px 20px; background:var(--purple-soft); border-radius:var(--radius-lg);}
+.map-ways h3{margin:0 0 10px; font-size:1.15rem;}
+.map-ways ul{margin:0 0 10px; padding-left:20px; line-height:1.6; color:var(--ink-soft);}
+.map-ways p{margin:0; color:var(--ink-soft);}
+.map-under{margin:22px 0 0; font-size:var(--text-min); color:var(--ink-faint); line-height:1.6;}
+/* phones and narrow windows: one column, with each card saying Free or Helios itself */
+@media (max-width: 760px){
+  .map-cols{display:none;}
+  .map-row{grid-template-columns:1fr;}
+  .map-move{display:none;}
+  .map-note{grid-column:1;}
+}
+
+/* ---------- Grav Helios step up (homepage family cards: a free Grav project, then its Helios sibling) ----------
+   Uses the site's own tokens, so it follows light and dark mode. */
+.step-up{margin:24px 0 0; padding:16px 18px; background:var(--purple-soft); border-radius:var(--radius-lg);}
+.step-up-label{margin:0 0 4px; font-family:var(--font-mono); font-size:var(--text-min); text-transform:uppercase; letter-spacing:0.04em; color:var(--amber);}
+.step-up h4{margin:0 0 6px; font-size:1.3rem;}
+.step-up p{margin:0 0 8px; color:var(--ink-soft); line-height:1.6;}
+.step-up p.step-up-links{margin:0;}
