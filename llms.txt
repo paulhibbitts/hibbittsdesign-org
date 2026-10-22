@@ -15,7 +15,7 @@ All projects are free, open-source, and MIT licensed; none require a database. T
 - [Grav Open Course Hub](https://hibbittsdesign.org/grav-open-course-hub.html): The free course site for one course, with Grav Open MultiCourse Hub for several; its Grav Premium Helios step up is Course Hub.
 - [Grav Helios Open Reader](https://hibbittsdesign.org/grav-helios-open-reader.html): The Grav Premium Helios reading site for open textbooks and OER.
 - [Grav Helios Course Hub](https://hibbittsdesign.org/grav-helios-course-hub.html): The Grav Premium Helios site for one or several courses.
-- [More Cost-Free Grav Projects](https://hibbittsdesign.org/cost-free-grav-projects.html): The free Mermaid, Git Page Link and Admin2 Site ReadMe plugins, and the Learn2 with Git Sync documentation site.
+- [More Cost-Free Grav Projects](https://hibbittsdesign.org/cost-free-grav-projects.html): The free Mermaid, LaTeX Math, Git Page Link and Admin2 Site ReadMe plugins, and the Learn2 with Git Sync documentation site.
 - [Contact](https://hibbittsdesign.org/contact.html): Email address and contact form.
 
 ## Projects
@@ -29,6 +29,7 @@ All projects are free, open-source, and MIT licensed; none require a database. T
 - [Grav Helios Course Hub](https://demo.hibbittsdesign.org/grav-helios-course-hub/): Single- or multi-course hub CMS built on Grav and the paid Grav Premium Helios theme, with a browser-based admin panel. Write course content in Markdown and embed it in Canvas, Moodle, or Brightspace (a content layer, not an LMS). Source: https://github.com/hibbitts-design/grav-skeleton-helios-course-hub
 - [Grav Learn2 with Git Sync](https://demo.hibbittsdesign.org/grav-learn2-git-sync/): Free documentation-site skeleton with search and RSS/Atom feeds. Source: https://github.com/hibbitts-design/grav-skeleton-learn2-with-git-sync
 - [Mermaid Plugin](https://github.com/hibbitts-design/grav-plugin-mermaid): Free plugin that draws Mermaid diagrams (flowcharts, timelines, sequence diagrams and more) from text in a page, in light or dark mode to match the theme, with titles and descriptions for screen readers; works with most Grav themes, on Grav 2 and 1.7.
+- [LaTeX Math Plugin](https://github.com/hibbitts-design/grav-plugin-latex-math): Free plugin that draws LaTeX math (formulas, equations and chemistry) written as $…$, $$…$$ or ```math blocks, with KaTeX or MathJax, in light or dark mode to match the theme, with hidden MathML for screen readers; works with most Grav themes, on Grav 2 and 1.7.
 - [Git Page Link Plugin](https://github.com/hibbitts-design/grav-plugin-git-page-link): Free plugin that adds an "Edit this Page" link back to the Markdown source, works with most Grav themes.
 - [Admin2 Site ReadMe Plugin](https://github.com/hibbitts-design/grav-plugin-admin2-site-readme): Free Grav 2 plugin that shows a site's own ReadMe, such as a README on GitHub, in the Admin 2 sidebar, so the people editing a site can read its how-tos where they work.
 
