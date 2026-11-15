@@ -68,7 +68,7 @@
           <a href="docsify-starter-kits.html">Docsify Starter Kits</a>
           <a href="grav-projects-at-a-glance.html">Grav CMS Projects at a Glance</a>
           <a href="grav-open-publishing-space.html">Grav Open Publishing Space</a>
-          <a href="grav-open-course-hub.html">Grav Open Course Hub</a>
+          <a href="grav-open-course-space.html">Grav Open Course Space</a>
           <a href="grav-helios-open-reader.html">Grav Helios Open Reader</a>
           <a href="grav-helios-course-hub.html">Grav Helios Course Hub</a>
           <a href="cost-free-grav-projects.html">More Cost-Free Grav Projects</a>
@@ -140,7 +140,7 @@
          Free or Helios itself, so these are hidden from screen readers to avoid repeating it. -->
     <div class="map-cols" aria-hidden="true">
       <span></span>
-      <p class="map-col-head"><strong>Free</strong> MIT license &middot; Grav 2 &amp; 1.7</p>
+      <p class="map-col-head"><strong>Free</strong> MIT license &middot; Grav 2 (Open Publishing Space also 1.7)</p>
       <p class="map-col-head"><strong>Premium Helios</strong> one-time Helios theme license ($50 per site) &middot; Grav 2</p>
     </div>
 
@@ -163,24 +163,16 @@
       <p class="map-note">Guides move between the two unchanged.</p>
     </div>
 
-    <!-- Row 2: course sites. Open Course Hub and Open MultiCourse Hub both lead to Helios Course Hub,
-         which handles one or several courses, so its card spans both free cards -->
-    <div class="map-row map-row-courses">
+    <!-- Row 2: course sites. Open Course Space (one course or many) leads to Helios Course Hub. Open Course Hub
+         and Open MultiCourse Hub, which it replaces for new sites, get a note -->
+    <div class="map-row">
       <h3 class="map-need">A course site</h3>
-      <div class="map-stack">
-        <article class="map-card">
-          <p class="map-kind">Free &middot; one course</p>
-          <h4><a href="grav-open-course-hub.html" class="tlink">Open Course Hub</a></h4>
-          <p>One course, with modules or weekly units and an optional course blog.</p>
-          <p class="map-links"><a href="https://demo.hibbittsdesign.org/grav-open-course-hub" class="tlink" target="_blank" rel="noopener">Demo</a></p>
-        </article>
-        <article class="map-card">
-          <p class="map-kind">Free &middot; several courses</p>
-          <h4><a href="grav-open-course-hub.html#multicourse" class="tlink">Open MultiCourse Hub</a></h4>
-          <p>Several courses in one site, each with its own navigation, colours and sidebar.</p>
-          <p class="map-links"><a href="https://demo.hibbittsdesign.org/grav-open-multi-course-hub" class="tlink" target="_blank" rel="noopener">Demo</a></p>
-        </article>
-      </div>
+      <article class="map-card">
+        <p class="map-kind">Free &middot; one course or many &middot; early preview</p>
+        <h4><a href="grav-open-course-space.html" class="tlink">Open Course Space</a></h4>
+        <p>One course or many in one site, each with its own colour, header image and pages, and modules or weekly units.</p>
+        <p class="map-links"><a href="https://demo.hibbittsdesign.org/grav-open-course-space/" class="tlink" target="_blank" rel="noopener">Demo</a></p>
+      </article>
       <p class="map-move" aria-hidden="true">&rarr;</p>
       <article class="map-card">
         <p class="map-kind">Premium Helios &middot; one or several courses</p>
@@ -188,7 +180,7 @@
         <p>One or several courses in a single install, with modules at the centre and Helios&#8217;s app-like layout.</p>
         <p class="map-links"><a href="https://demo.hibbittsdesign.org/grav-helios-course-hub/" class="tlink" target="_blank" rel="noopener">Demo</a></p>
       </article>
-      <p class="map-note">Course content moves across with a few adjustments.</p>
+      <p class="map-note">Courses use the same page types and settings, so they move between the two. The earlier free <a href="grav-open-course-hub.html" class="tlink">Open Course Hub</a> and Open MultiCourse Hub will soon be in maintenance mode.</p>
     </div>
 
     <!-- Row 3: documentation. On the Helios side, the Grav Premium Helios theme itself is the documentation theme
@@ -214,8 +206,8 @@
       <h3>Ways in</h3>
       <ul>
         <li><a href="https://pressbooks-converter.hibbittsdesign.org/" class="tlink" target="_blank" rel="noopener">Pressbooks Converter</a> (beta) &ndash; a Pressbooks book &rarr; Open Publishing Space or Helios Open Reader</li>
-        <li><a href="https://common-cartridge-converter.hibbittsdesign.org/" class="tlink" target="_blank" rel="noopener">Common Cartridge Converter</a> (beta) &ndash; a Canvas, Moodle, Brightspace or Blackboard course &rarr; Open Course Hub (modules), Open MultiCourse Hub (a whole course) or Helios Course Hub</li>
-        <li><a href="https://open-publishing-course-hub-converter.hibbittsdesign.org/" class="tlink" target="_blank" rel="noopener">Open Publishing Course Hub Converter</a> (beta) &ndash; Docsify guides and courses &rarr; Open Publishing Space or Open Course Hub, and back</li>
+        <li><a href="https://common-cartridge-converter.hibbittsdesign.org/" class="tlink" target="_blank" rel="noopener">Common Cartridge Converter</a> (beta) &ndash; a Canvas, Moodle, Brightspace or Blackboard course &rarr; Open Course Space or Helios Course Hub</li>
+        <li><a href="https://open-publishing-course-space-converter.hibbittsdesign.org/" class="tlink" target="_blank" rel="noopener">Open Publishing Course Space Converter</a> (beta) &ndash; Docsify guides and courses &rarr; Open Publishing Space or Open Course Space, and back</li>
       </ul>
       <p>All three are on the <a href="https://grav-converters.hibbittsdesign.org/" class="tlink" target="_blank" rel="noopener">Grav Converters</a> page.</p>
     </div>
@@ -248,15 +240,15 @@
         <table class="compare-table">
           <caption>Course sites</caption>
           <thead>
-            <tr><th scope="col"><span class="sr-only">Feature</span></th><th scope="col"><a href="grav-open-course-hub.html" class="tlink">Open Course Hub &amp; MultiCourse Hub</a> <span class="compare-tag">Free</span></th><th scope="col"><a href="grav-helios-course-hub.html" class="tlink">Helios Course Hub</a></th></tr>
+            <tr><th scope="col"><span class="sr-only">Feature</span></th><th scope="col"><a href="grav-open-course-space.html" class="tlink">Open Course Space</a> <span class="compare-tag">Free</span></th><th scope="col"><a href="grav-helios-course-hub.html" class="tlink">Helios Course Hub</a></th></tr>
           </thead>
           <tbody>
             <tr><th scope="row">Cost</th><td>Free, MIT license</td><td>Free skeleton, plus a one-time Premium Helios theme license ($50 per site)</td></tr>
-            <tr><th scope="row">Grav</th><td>Grav 2 and 1.7</td><td>Grav 2</td></tr>
-            <tr><th scope="row">Courses</th><td>One (Course Hub) or several (MultiCourse Hub)</td><td>One or several in a single install, set up automatically</td></tr>
-            <tr><th scope="row">Modules</th><td>Modules at the centre of each course, with an optional course blog</td><td>Modules at the centre of each course</td></tr>
-            <tr><th scope="row">Design</th><td>2026 Modern, with a tinted NavBar in each course&#8217;s colour</td><td>Helios&#8217;s app-like layout, with sidebar navigation and a table of contents on pages</td></tr>
-            <tr><th scope="row">LMS course conversion</th><td>Yes, with the Common Cartridge Converter (beta): modules for Course Hub, or a whole course for MultiCourse Hub</td><td>Yes, with the Common Cartridge Converter (beta)</td></tr>
+            <tr><th scope="row">Grav</th><td>Grav 2</td><td>Grav 2</td></tr>
+            <tr><th scope="row">Courses</th><td>One or many in a single install, with a Courses page</td><td>One or several in a single install, set up automatically</td></tr>
+            <tr><th scope="row">Modules</th><td>Modules or weekly units in each course, with a blog shared by all courses or a course&#8217;s own</td><td>Modules at the centre of each course</td></tr>
+            <tr><th scope="row">Design</th><td>Quark 2, Grav 2&#8217;s modern theme, with a course navbar tinted in each course&#8217;s colour</td><td>Helios&#8217;s app-like layout, with sidebar navigation and a table of contents on pages</td></tr>
+            <tr><th scope="row">LMS course conversion</th><td>Yes, with the Common Cartridge Converter (beta)</td><td>Yes, with the Common Cartridge Converter (beta)</td></tr>
             <tr><th scope="row">LMS embedding</th><td>Yes</td><td>Yes</td></tr>
           </tbody>
         </table>
@@ -266,7 +258,7 @@
     </div>
 
     <!-- The product names above are the ones to look for; the themes and plugins underneath are listed here once -->
-    <p class="map-under"><strong>Under the hood:</strong> Open Publishing Space uses the Quark 2 Open Publishing theme (Grav 2) or Quark Open Publishing (Grav 1.7); Open Course Hub and Open MultiCourse Hub use the Bootstrap4 Open Matter theme; Helios Open Reader and Helios Course Hub are plugins for the Grav Premium Helios theme. For a side-by-side comparison, see <a href="#free-or-helios" class="tlink">Free or Grav Premium Helios? Compare in Detail</a> below</p>
+    <p class="map-under"><strong>Under the hood:</strong> Open Publishing Space uses the Quark 2 Open Publishing theme (Grav 2) or Quark Open Publishing (Grav 1.7); Open Course Space uses Quark 2 Open Publishing too; Helios Open Reader and Helios Course Hub are plugins for the Grav Premium Helios theme. For a side-by-side comparison, see <a href="#free-or-helios" class="tlink">Free or Grav Premium Helios? Compare in Detail</a> below</p>
   </section>
 
 
@@ -279,7 +271,7 @@
         <a href="docsify-starter-kits.html">Docsify Starter Kits</a>
         <a href="grav-projects-at-a-glance.html">Grav CMS Projects at a Glance</a>
         <a href="grav-open-publishing-space.html">Grav Open Publishing Space</a>
-        <a href="grav-open-course-hub.html">Grav Open Course Hub</a>
+        <a href="grav-open-course-space.html">Grav Open Course Space</a>
         <a href="grav-helios-open-reader.html">Grav Helios Open Reader</a>
         <a href="grav-helios-course-hub.html">Grav Helios Course Hub</a>
         <a href="cost-free-grav-projects.html">More Cost-Free Grav Projects</a>

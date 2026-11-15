@@ -1,0 +1,324 @@
+<!doctype html>
+<!-- Developed with the assistance of Claude Code (claude.ai) -->
+<!-- Body copy on this page uses real, hand-written <a>/<strong> tags, not
+     Markdown syntax -- every link and emphasis exists in the raw HTML for
+     crawlers and visitors that don't execute JavaScript. -->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- GOOGLE ANALYTICS START (managed by tools/sync_boilerplate.py -- edit this file, not the copies inlined in each page) -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5BW4N72FHR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-5BW4N72FHR');
+</script>
+<!-- GOOGLE ANALYTICS END -->
+<link rel="icon" type="image/png" href="assets/icons/favicon.png">
+<link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+<meta name="theme-color" content="#fcfcfb" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#17181a" media="(prefers-color-scheme: dark)">
+
+<!-- ====================================================================
+     SITE METADATA — page title, search/social descriptions, structured data.
+     Shares a domain with the other pages (hibbittsdesign.org).
+     ==================================================================== -->
+<title>Free Course Site for One Course or Many &ndash; Grav Open Course Space | HibbittsDesign.org</title>
+<meta name="description" content="A free, open-source home on the web for one course or many &ndash; Markdown files on Grav CMS that embed in Canvas, Moodle and Brightspace, no database required. An early preview.">
+<link rel="canonical" href="https://hibbittsdesign.org/grav-open-course-space.html">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://hibbittsdesign.org/grav-open-course-space.html">
+<meta property="og:title" content="Free Course Site for One Course or Many &ndash; Grav Open Course Space | HibbittsDesign.org">
+<meta property="og:description" content="A free, open-source home on the web for one course or many &ndash; Markdown files on Grav CMS that embed in Canvas, Moodle and Brightspace, no database required. An early preview.">
+<meta property="og:image" content="https://hibbittsdesign.org/assets/icons/og-grav-open-course-space.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The Grav Open Course Space demo in a browser window: the CPT363-1 course home page, with its course navbar, header image and What's Happening This Week">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@hibbittsdesign">
+<meta name="twitter:title" content="Free Course Site for One Course or Many &ndash; Grav Open Course Space | HibbittsDesign.org">
+<meta name="twitter:description" content="A free, open-source home on the web for one course or many &ndash; Markdown files on Grav CMS that embed in Canvas, Moodle and Brightspace, no database required. An early preview.">
+<meta name="twitter:image" content="https://hibbittsdesign.org/assets/icons/og-grav-open-course-space.png">
+
+<!-- Structured data for search engines -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Grav Open Course Space",
+  "url": "https://demo.hibbittsdesign.org/grav-open-course-space/",
+  "codeRepository": "https://github.com/hibbitts-design/grav-skeleton-open-course-space",
+  "description": "A free, open-source Grav CMS site for one course or many, with modules or weekly units, that embeds in any LMS.",
+  "applicationCategory": "WebApplication",
+  "operatingSystem": "Web",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
+}
+</script>
+
+<!-- Public Sans and JetBrains Mono are self-hosted (assets/fonts/), not
+     loaded from Google Fonts, so the page has no external dependency and
+     works fully offline once deployed. See the @font-face rules at the
+     top of styles.css to swap in different fonts or weights. -->
+<link rel="stylesheet" href="assets/shared.css">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<div class="wrap">
+
+  <!-- ============ 1. HEADER / NAV ============ -->
+  <header class="site-head">
+    <span class="brand-line"><a class="brand" href="https://hibbittsdesign.org/"><img class="brand-mark" src="assets/icons/hd-logo.png" width="83" height="178" alt=""><span><strong>HibbittsDesign<wbr>.org</strong></span></a></span>
+    <nav>
+      <div class="nav-item">
+        <a href="index.html#projects" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false">Projects</a>
+        <div class="dropdown-menu">
+          <a href="docsify-this.html">Docsify&#8209;This</a>
+          <a href="docsify-starter-kits.html">Docsify Starter Kits</a>
+          <a href="grav-projects-at-a-glance.html">Grav CMS Projects at a Glance</a>
+          <a href="grav-open-publishing-space.html">Grav Open Publishing Space</a>
+          <a href="grav-open-course-space.html">Grav Open Course Space</a>
+          <a href="grav-helios-open-reader.html">Grav Helios Open Reader</a>
+          <a href="grav-helios-course-hub.html">Grav Helios Course Hub</a>
+          <a href="cost-free-grav-projects.html">More Cost-Free Grav Projects</a>
+        </div>
+      </div>
+      <a href="about.html">About Paul</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <!-- "Projects" dropdown: standard disclosure pattern. Tabbing to the
+         trigger does NOT open it by itself -- only an explicit activation
+         (click, or Enter on the focused link) toggles the .open class,
+         which is the single source of truth for visibility. This matters:
+         an earlier version also opened on :focus-within, which meant
+         Escape's "close and return focus to the trigger" put focus right
+         back on the one element that reopened it, so Escape silently did
+         nothing whenever focus was on a menu item rather than the trigger
+         itself. Keeping focus and openness independent avoids that. The
+         trigger's real href (index.html#projects) is the fallback if this
+         script doesn't run at all.
+         This script must stay nested inside the header element (not placed
+         after it), since sync_boilerplate.py's regex for this block stops
+         at the first closing header tag it finds -- placed outside, a
+         script here would be left behind as stale debris on the next
+         resync instead of being replaced along with everything else.
+         NOTE: do not spell out the literal opening/closing header markup
+         in this comment -- doing so once fooled that same regex into
+         matching too little and corrupting all pages using this partial. -->
+    <script>
+      document.querySelectorAll('.nav-item').forEach(function (item) {
+        var trigger = item.querySelector('.dropdown-trigger');
+        function setOpen(open) {
+          item.classList.toggle('open', open);
+          trigger.setAttribute('aria-expanded', open ? 'true' : 'false');
+        }
+        trigger.addEventListener('click', function (e) {
+          e.preventDefault();
+          setOpen(!item.classList.contains('open'));
+        });
+        item.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape' && item.classList.contains('open')) {
+            setOpen(false);
+            trigger.focus();
+          }
+        });
+        item.addEventListener('focusout', function (e) {
+          if (!item.contains(e.relatedTarget)) { setOpen(false); }
+        });
+        document.addEventListener('click', function (e) {
+          if (!item.contains(e.target) && item.classList.contains('open')) { setOpen(false); }
+        });
+      });
+    </script>
+  </header><!-- ============ 2. GRAV OPEN COURSE HUB (and Open MultiCourse Hub) ============ -->
+  <section class="hero">
+    <div class="badge-row eyebrow-row">
+      <span class="badge green">Cost-Free &amp; Open Source</span>
+      <span class="badge plain">Early Preview</span>
+      <span class="badge plain">MIT Licensed</span>
+      <span class="badge plain">Grav 2</span>
+    </div>
+    <h1>Grav Open Course Space</h1>
+    <p class="tier-track"><span class="tier-step green current"><span class="tier-dot"></span>Full CMS</span></p>
+    <p class="lede">Grav Open Course Space is a free, open-source home on the web for one course or many, inside or outside your LMS &ndash; a ready-to-run Grav CMS skeleton package, with Markdown file-based content and a browser-based Admin panel, and no database. It&rsquo;s the twin of <a href="grav-open-publishing-space.html" class="tlink">Grav Open Publishing Space</a>, and the free successor to <a href="grav-open-course-hub.html" class="tlink">Grav Open Course Hub</a> and Open MultiCourse Hub, which will soon be in maintenance mode.</p>
+    <p class="lede">Open Course Space is an early preview (version 0.9): ready to try, with some things still being refined before 1.0. Want Helios&rsquo;s app-like design later? Courses use the same page types and settings as <a href="grav-helios-course-hub.html" class="tlink">Grav Helios Course Hub</a>. <a href="grav-projects-at-a-glance.html" class="tlink">Grav CMS Projects at a Glance</a> shows every Grav project, free and Premium Helios, side by side.</p>
+    <p class="jump-links">Jump to: <a href="#sets-it-apart" class="tlink">What Sets It Apart</a> &middot; <a href="#moving-courses" class="tlink">Moving Courses In</a> &middot; <a href="#markdown-and-your-lms" class="tlink">Markdown and Your LMS</a> &middot; <a href="#see-it-in-action" class="tlink">See It in Action</a></p>
+    <hr class="hero-rule">
+  </section>
+
+  <section class="grav-projects">
+    <div class="thumb-grid">
+      <figure>
+        <div class="grav-thumb"><a href="https://demo.hibbittsdesign.org/grav-open-course-space/" target="_blank" rel="noopener"><img src="assets/screenshots/grav-open-course-space-thumb.webp" width="800" height="639" alt="Screenshot of the Grav Open Course Space demo: the CPT363-1 course home page, with its course navbar, header image, What's Happening This Week and the course sidebar"></a></div>
+        <figcaption class="thumb-cap">Open Course Space &ndash; Course home</figcaption>
+      </figure>
+      <figure>
+        <div class="grav-thumb"><a href="https://demo.hibbittsdesign.org/grav-open-course-space/cpt363-basic/modules" target="_blank" rel="noopener"><img src="assets/screenshots/grav-open-course-space-modules-thumb.webp" width="800" height="639" alt="Screenshot of the Grav Open Course Space demo: the CPT363-1 Modules page, with a card for each module and the course sidebar"></a></div>
+        <figcaption class="thumb-cap">Open Course Space &ndash; Modules</figcaption>
+      </figure>
+    </div>
+
+    <div class="proj-section">
+      <h2>Who It&#8217;s For</h2>
+      <ul class="feat-list">
+        <li>Educators building an open home for one course, or for several on one site</li>
+        <li>Instructors who want course content they can reuse from term to term, outside the LMS</li>
+        <li>Anyone who wants a free, fully open-source course site with no licence to buy</li>
+        <li>Individuals or teams that want a version-controlled, GitHub or Codeberg workflow</li>
+      </ul>
+    </div>
+
+    <div class="proj-section">
+      <h2>Built for Teaching and Learning</h2>
+      <p>One course or many, each with its own space &ndash; giving learners what they need each week, and educators full control.</p>
+      <ul class="feat-list">
+        <li><strong>One course or many</strong> &ndash; a Courses page with a card for each course; with only one course, the logo goes straight to it</li>
+        <li><strong>Each course its own space</strong> &ndash; a course navbar with the course&rsquo;s name and pages, plus its own colour, header image, sidebar and footer</li>
+        <li><strong>A clear weekly focus</strong> &ndash; a Home page with &ldquo;What&rsquo;s Happening This Week&rdquo; reminders, plus schedule, resources and syllabus pages</li>
+        <li><strong>Modules or weekly units</strong> &ndash; a Modules page with a card for each module, a list of modules beside every module page, and Previous and Next buttons; or weekly units, newest first</li>
+        <li><strong>A blog, shared or per course</strong> &ndash; a site blog shared by all courses, or a course&rsquo;s own</li>
+        <li><strong>Learning content built in</strong> &ndash; Learning Objectives, Key Takeaways, reflections, callouts and badges, plus Google Slides, H5P, PDF and link card embeds</li>
+        <li><strong>Course search</strong> &ndash; a search box beside each course&rsquo;s pages searches just that course</li>
+        <li><strong>Light, Dark &amp; Auto modes</strong> &ndash; on Quark 2, Grav 2&rsquo;s modern theme, with English, French and German</li>
+      </ul>
+    </div>
+
+    <div class="proj-section" id="sets-it-apart">
+      <h2>What Sets It Apart</h2>
+      <ul class="feat-list">
+        <li><strong>LMS embedding without LTI</strong> &ndash; embed any page in Canvas, Moodle or Brightspace with a URL parameter; no LTI setup or plugin needed</li>
+        <li><strong>Share content between courses</strong> &ndash; reuse any page or section across courses with the included Page Inject plugin</li>
+        <li><strong>Learners keep their place</strong> &ndash; Keep My Place offers a Continue Reading link on the Modules page, back to the last module page they read</li>
+        <li><strong>Reuse built in</strong> &ndash; an optional &ldquo;This page as Markdown&rdquo; link on pages, for anyone reusing your content</li>
+        <li><strong>Moves to Premium Helios</strong> &ndash; the same page types and settings as Grav Helios Course Hub, so courses can move between the two</li>
+        <li><strong>Ready for the 5Rs, no extra step</strong> &ndash; plain Markdown means your content is already ready to retain, reuse, revise, remix, and redistribute</li>
+        <li><strong>No build pipeline</strong> &ndash; edit in the browser-based Admin panel or via Git; changes go live immediately</li>
+      </ul>
+    </div>
+
+    <div class="proj-section" id="moving-courses">
+      <h2>Moving Courses In</h2>
+      <ul class="feat-list">
+        <li><strong>From your LMS</strong> &ndash; the companion <a href="https://common-cartridge-converter.hibbittsdesign.org/" class="tlink" target="_blank" rel="noopener">Common Cartridge Converter</a> (beta) turns a Canvas, Moodle, Brightspace or Blackboard export (.imscc) into an Open Course Space course, for you to review and refine (<a href="https://demo.hibbittsdesign.org/variants/grav-open-course-space-common-cartridge-it2dda/" class="tlink" target="_blank" rel="noopener">see an example</a>)</li>
+        <li><strong>From Docsify</strong> &ndash; the <a href="https://open-publishing-course-space-converter.hibbittsdesign.org/" class="tlink" target="_blank" rel="noopener">Open Publishing Course Space Converter</a> (beta) moves courses between Docsify and Open Course Space, in either direction</li>
+        <li><strong>From Open Course Hub or Open MultiCourse Hub</strong> &ndash; MultiCourse Hub courses move in unchanged, and an Open Course Hub course moves into a course folder of its own (see the <a href="https://github.com/hibbitts-design/grav-skeleton-open-course-space#moving-existing-courses" class="tlink" target="_blank" rel="noopener">README</a>)</li>
+      </ul>
+    </div>
+
+    <div class="proj-section" id="markdown-and-your-lms">
+      <h2>Write Your Courses in Markdown, Keep Your LMS</h2>
+      <p>Open Course Space is not a learning management system. It holds your course content as Markdown files that you own and version with Git, while your LMS keeps handling enrollment, grading, and assessment.</p>
+      <ul class="feat-list">
+        <li><strong>Markdown content, outside the LMS</strong> &ndash; write and revise in plain Markdown files, then reuse them from term to term, or across Canvas, Moodle, and Brightspace</li>
+        <li><strong>Embed any page in your LMS</strong> &ndash; a URL parameter displays only the page content</li>
+      </ul>
+    </div>
+
+    <div class="proj-section">
+      <h2>Behind the Scenes</h2>
+      <ul class="feat-list">
+        <li><strong>Markdown files, not a database</strong> &ndash; content runs on simple text files, easier to back up, version control, and migrate than database-driven platforms</li>
+        <li><strong>Open collaborative authoring</strong> &ndash; Git Sync keeps your files and live site matched, with &ldquo;Edit this Page&rdquo; links back to the Markdown source</li>
+        <li><strong>Free and open source</strong> &ndash; MIT licensed, on the free Quark 2 Open Publishing theme, shared with Open Publishing Space; runs on Grav 2 (PHP 8.3+)</li>
+      </ul>
+    </div>
+
+    <div class="proj-section">
+      <h2>Why Grav CMS?</h2>
+      <p>A mature, stable platform that just completed its biggest release yet &ndash; Grav 2 brings the completely new Admin 2 panel, a built-in API, AI-ready content and workflows, and support for the latest PHP versions. File-based content you fully control, no database required, and updates go live immediately with no build process required. Ten years on, 15.7k+ GitHub stars, and built for what&#8217;s next.</p>
+      <p>On Grav 2, even this free project gets the completely new Admin 2 panel, with a Getting Started guide in its sidebar.</p>
+    </div>
+
+    <div class="proj-section">
+      <h2>What&#8217;s Included</h2>
+      <ul class="feat-list">
+        <li>Three example courses: CPT363-1 by modules, CPT363-2 with its own blog, and CPT363-3 by weekly units (the last two switched off, ready to turn on)</li>
+        <li>A Sample Course, switched off, as a starting point for your own</li>
+        <li>A site blog, an About the Courses page, and Getting Started in the Admin panel</li>
+        <li>A Read Me page describing every setting</li>
+      </ul>
+    </div>
+
+    <div class="grav-plugin" id="see-it-in-action">
+      <h2>See It in Action</h2>
+      <div class="links">
+        <a class="cta green" href="https://demo.hibbittsdesign.org/grav-open-course-space/" target="_blank" rel="noopener"><span class="arrow">&rarr;</span> Open Course Space demo</a>
+        <a class="cta plain" href="https://demo.hibbittsdesign.org/variants/grav-open-course-space-common-cartridge-it2dda/" target="_blank" rel="noopener">Converted LMS Course</a>
+        <a class="cta plain" href="https://github.com/hibbitts-design/grav-skeleton-open-course-space/releases/latest/download/grav-skeleton-open-course-space.zip" target="_blank" rel="noopener">Download</a>
+        <a class="cta plain" href="https://github.com/hibbitts-design/grav-skeleton-open-course-space" target="_blank" rel="noopener">View on GitHub</a>
+      </div>
+    </div>
+
+    <div class="grav-plugin">
+      <h2>Ready for Helios&rsquo;s App-Like Design?</h2>
+      <p><a href="grav-helios-course-hub.html" class="tlink">Grav Helios Course Hub</a> is the Grav Premium Helios step up: one or several courses in a single install, with modules at the centre, sidebar navigation and a table of contents on pages. It needs the <a href="https://getgrav.org/premium/helios" class="tlink" target="_blank" rel="noopener">Grav Premium Helios theme</a>, a paid theme sold by the Grav team at getgrav.org ($50 per site, one-time license) &ndash; its sales help fund Grav CMS development. Your course content moves across with a few adjustments.</p>
+    </div>
+
+    <div class="grav-plugin">
+      <h2>Questions, Help, or Customization?</h2>
+      <p>Questions, ideas, or curious how this might fit your course, OER project, or publication? Feel free to <a href="contact.html" class="tlink">get in touch</a>. If you&#8217;d like more hands-on support with setup, theming, content structure, or workflow design, see <a href="services.html" class="tlink">Additional Professional Services &amp; Support</a>. Migrating existing content? Discover <a href="https://grav-converters.hibbittsdesign.org/" class="tlink" target="_blank" rel="noopener">Grav Converters</a>. Looking to publish an open guide or book instead? Discover <a href="grav-open-publishing-space.html" class="tlink">Grav Open Publishing Space</a>.</p>
+    </div>
+  </section>
+
+  <!-- ============ 3. FOOTER — byline + links ============ -->
+  <footer>
+    <div class="fmap">
+      <div class="fmap-col">
+        <p class="fmap-label">Projects</p>
+        <a href="docsify-this.html">Docsify&#8209;This</a>
+        <a href="docsify-starter-kits.html">Docsify Starter Kits</a>
+        <a href="grav-projects-at-a-glance.html">Grav CMS Projects at a Glance</a>
+        <a href="grav-open-publishing-space.html">Grav Open Publishing Space</a>
+        <a href="grav-open-course-space.html">Grav Open Course Space</a>
+        <a href="grav-helios-open-reader.html">Grav Helios Open Reader</a>
+        <a href="grav-helios-course-hub.html">Grav Helios Course Hub</a>
+        <a href="cost-free-grav-projects.html">More Cost-Free Grav Projects</a>
+      </div>
+      <div class="fmap-col">
+        <p class="fmap-label">Resources</p>
+        <p class="fmap-sublabel">Guides</p>
+        <a href="docsify-this-tutorials-workshops.html">Docsify&#8209;This Tutorials &amp; Workshops</a>
+        <a href="creating-github-course-notes.html">Creating GitHub Course Notes for Docsify&#8209;This</a>
+        <a href="viewing-github-course-notes.html">Viewing an Instructor's GitHub Course Notes with Docsify&#8209;This</a>
+        <p class="fmap-sublabel">Design Notes</p>
+        <a href="systems-oriented-design.html">Systems-Oriented Design in Practice</a>
+        <a href="architecture-beneath-the-user-experience.html">The Architecture Beneath the User Experience</a>
+        <a href="open-source-with-a-positive-vibe.html">Open Source with a Positive Vibe</a>
+        <a href="dual-purpose-documentation-framework.html">A Dual-Purpose Documentation Framework</a>
+        <a href="quick-acid-test-product-design-knowledge.html">A Quick Acid Test for Your Product Design Knowledge</a>
+      </div>
+      <div class="fmap-col">
+        <p class="fmap-label">Info</p>
+        <a href="about.html">About Paul</a>
+        <a href="services.html">Services</a>
+        <a href="testimonials.html">Testimonials</a>
+        <a href="contact.html">Contact</a>
+        <a href="design-origins.html">Design Origins</a>
+      </div>
+    </div>
+    <div class="fcolophon">
+      <p>Designed and built by <a href="about.html" class="tlink">Paul Hibbitts</a>. All projects are open source and MIT licensed. If one is useful to you, a GitHub &#9733; helps someone else find it. Questions or need help? <a href="contact.html" class="tlink">Get in touch</a> &ndash; or see <a href="services.html" class="tlink">Services</a> for professional support&nbsp;options.</p>
+      <div class="ffollow">
+        <p class="fmap-label">Follow</p>
+        <div class="flinks">
+          <a href="https://github.com/hibbitts-design" target="_blank" rel="noopener"><span class="ficon ficon-github" aria-hidden="true"></span> GitHub</a>
+          <a href="https://mastodon.social/@hibbittsdesign" target="_blank" rel="noopener"><span class="ficon ficon-mastodon" aria-hidden="true"></span> Mastodon</a>
+          <a href="https://bsky.app/profile/hibbittsdesign.org" target="_blank" rel="noopener"><span class="ficon ficon-bluesky" aria-hidden="true"></span> Bluesky</a>
+          <a href="https://ca.linkedin.com/in/paulhibbitts" target="_blank" rel="noopener"><span class="ficon ficon-linkedin" aria-hidden="true"></span> LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+
+</body>
+</html>

@@ -16,7 +16,7 @@ PAGES = ["index.html", "contact.html", "services.html", "cost-free-grav-projects
          "thinking-like-a-consultant.html", "architecture-beneath-the-user-experience.html",
          "quick-acid-test-product-design-knowledge.html",
          "grav-projects-at-a-glance.html",
-         "grav-open-publishing-space.html", "grav-open-course-hub.html"]
+         "grav-open-publishing-space.html", "grav-open-course-hub.html", "grav-open-course-space.html"]
 # NOTE: keep this list in sync with the identical PAGES list in
 # error_check.py, playwright_sweep_v2.py, and sync_boilerplate.py --
 # add a new page to all four when one is created.
